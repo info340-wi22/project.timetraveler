@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+#navigationLinks {
+    margin-left: auto;
+}
+
+.navbar-brand {
+    padding-left: 5rem;
+    color: black;
+    font-size: 1.75rem;
+}
+
+.nav-item {
+    padding: 1rem;
+}
+
+.nav-link {
+    color: black;
+}
+
+.logo {
+    border: 1px #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 80px;
+}
+
+
+.leftHalf {
+    background: url(../img/timetravel.jpg);
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+}
+
+.rightHalf {
+    background-color: rgba(31, 192, 93, 0.5);
+    color: black;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+}
+
+.center {
+    text-align: center;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.space {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
