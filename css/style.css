@@ -2,14 +2,13 @@
     box-sizing: border-box;
 }
 
-#navigationLinks {
-    margin-left: auto;
+header {
+    background-color: #355C7D;
+    margin-bottom: 80px;
 }
 
-.navbar-brand {
-    padding-left: 5rem;
-    color: black;
-    font-size: 1.75rem;
+#navigationLinks {
+    margin-left: auto;
 }
 
 .nav-item {
@@ -17,14 +16,11 @@
 }
 
 .nav-link {
-    color: black;
+    color: #FF7582;
 }
 
 .logo {
-    border: 1px #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 80px;
+    width: 200px;
 }
 
 
@@ -55,4 +51,95 @@
 .space {
     padding-left: 2rem;
     padding-right: 2rem;
+}
+
+.time1 {
+    font-size: 2.3rem;
+    letter-spacing: 10px; 
+    font-family: 'Roboto', sans-serif;
+    background-color: #C56C86;
+    color: white;
+    border-radius: 10px;
+}
+
+.time2 {
+    font-size: 2.3rem;
+    letter-spacing: 10px; 
+    font-family: 'Roboto', sans-serif;
+    background-color: #355C7D;
+    color: white;
+    border-radius: 10px;
+}
+
+.date1 {
+    letter-spacing: .2px; 
+    padding-left: .3rem;
+    padding-right: .3rem;
+    font-family: 'Bitter', serif;
+    background-color: #725A7A;
+    color: white;
+    border-radius: 10px;
+}
+
+.date2 {
+    letter-spacing: .2px; 
+    padding-left: .3rem;
+    padding-right: .3rem;
+    font-family: 'Bitter', serif;
+    background-color: #355C7D;
+    color: white;
+    border-radius: 10px;
+}
+
+.TUE1 {
+    letter-spacing: 1px; 
+    padding-left: .8rem;
+    padding-right: .8rem;
+    font-family: 'Bitter', serif;
+    background-color: #725A7A;
+    color: white;
+    border-radius: 10px;
+}
+.TUE2 {
+    letter-spacing: 1px; 
+    padding-left: .8rem;
+    padding-right: .8rem;
+    font-family: 'Bitter', serif;
+    background-color: #355C7D;
+    color: white;
+    border-radius: 10px;
+}
+body {
+    margin: 40px 150px 40px 150px;
+    background-color: #1A2D47;
+}
+
+.location-name {
+    color: white;
+    background-color: #FF7582;
+    border-radius: 10px;
+    font-family: 'Bitter', serif;
+    margin-bottom: 25px;
+}
+
+.addLocation {
+    color: white;
+    background-color: #355C7D;
+    border-radius: 10px;
+    font-family: 'Bitter', serif;
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
+
+.guide span {
+    color: #FF7582;
+}
+
+footer {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    padding-top: 10rem;
+    font-family: 'Bitter', serif;
+    color: #725A7A;
 }
