@@ -23,29 +23,30 @@ header {
     width: 200px;
 }
 
+.fa-1x {
+    font-size: 1.5rem;
+} 
 
-.leftHalf {
-    background: url(../img/timetravel.jpg);
-    width: 50%;
-    position: absolute;
-    left: 0px;
+.picture {
+    background-image: url(../img/timetravel.jpg);
+    width: 100%;
     height: 100%;
+    background-size: cover;
 }
 
-.rightHalf {
-    background-color: rgba(31, 192, 93, 0.5);
-    color: black;
-    width: 50%;
+.text {
+    background-color: #6A7EAD;
+    color: white;
+    width: 100%;
     position: absolute;
-    right: 0px;
-    height: 100%;
+    height: auto;
 }
 
 .center {
     text-align: center;
     color: white;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .space {
@@ -142,4 +143,169 @@ footer {
     padding-top: 10rem;
     font-family: 'Bitter', serif;
     color: #725A7A;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
+
+/* Event List */
+.wholeBackground {
+    background-color: white;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    margin: 0;
+    font-size: 16px;
+}
+
+.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 0.8fr 0.4fr 0.8fr 0.8fr;
+    grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6";
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.card-text {
+    display: none;
+}
+
+.containerFooter {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    background: #ddd;
+}
+
+/* Media Query */
+@media (min-width: 768px) {
+    nav {
+        background-color:#355C7D; 
+    }
+    
+    .nav-item {
+        padding: 1rem;
+    }
+    
+    .nav-link {
+        color: white;
+    }
+    
+    .logo {
+        width: 150px;
+    }
+
+    .wholeBackground {
+        background-color: mintcream;;
+        font-family: 'Nunito Sans', 'Arial', sans-serif;
+        font-size: 18px;
+    }
+
+    .card-text {
+        display: inline;
+    }
+
+    /*.container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 0.6fr 0.6fr 0.8fr 0.8fr;
+        grid-template-areas: 
+        "card1 card1 card2 card2"
+        "card5 card3 card3 card3"
+        "card5 card6 card6 card4"
+        "card5 card6 card6 card4";
+        gap: 10px;
+    }    */
+}
+
+
+@media (min-width: 992px) {
+    
+    #navigationLinks {
+        margin-left: auto;
+        display: inline-flex;
+    }
+
+    nav {
+        background-color: #355C7D;
+    }
+    
+    .nav-item {
+        padding: 1rem;
+    }
+    
+    .nav-link {
+        color: #FF7582;
+    }
+    
+    .logo {
+        width: 200px;
+    }
+    
+    .picture {
+        background: url(../img/timetravel.jpg);
+        width: 50%;
+        position: absolute;
+        background-size: cover;
+        left: 0px;
+        height: 100%;
+    }
+    
+    .text {
+        background-color: #6A7EAD;
+        color: white;
+        width: 50%;
+        position: absolute;
+        right: 0px;
+        height: 100%;
+    }
+    
+    .center {
+        text-align: center;
+        color: white;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .space {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .wholeBackground {
+        background-color:  #f5cac3;
+        size: 100%;
+        font-family: 'Nunito Sans', 'Arial', sans-serif;
+        font-size: 20px;
+    }
+} 
