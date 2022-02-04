@@ -3,9 +3,9 @@
     box-sizing: border-box;
 }
 
-.fa-1x {
+ .fa-1x {
     font-size: 1.5rem;
-}
+} 
 
 nav {
     background-color: lightcyan;
@@ -51,47 +51,68 @@ nav {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
 /* Event List */
-body {
+.wholeBackground {
+    background-color: white;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: inherit;
-    box-sizing: border-box;
-  }
-  
-main {
-    flex: 1;
-  }
+    font-size: 16px;
+}
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-.card {
-    flex: 0 0 250px;
-    background-color: white;
-    margin: .5rem;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
-  }
-  
-.card img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-  
-.card p {
-    padding: .5rem 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 0.8fr 0.4fr 0.8fr 0.8fr;
+    grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6";
 }
 
-.card:hover {
-    background-color: gainsboro;
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+.card1 {
+    grid-area: card1;
 }
 
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.card-text {
+    display: none;
+}
+
+.containerFooter {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    background: #ddd;
+}
+
+/* Media Query */
 @media (min-width: 768px) {
     nav {
         background-color:#6A7EAD; 
@@ -117,6 +138,28 @@ main {
         padding: 5px;
         width: 80px;
     }
+
+    .wholeBackground {
+        background-color: mintcream;;
+        font-family: 'Nunito Sans', 'Arial', sans-serif;
+        font-size: 18px;
+    }
+
+    .card-text {
+        display: inline;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 0.6fr 0.6fr 0.8fr 0.8fr;
+        grid-template-areas: 
+        "card1 card1 card2 card2"
+        "card5 card3 card3 card3"
+        "card5 card6 card6 card4"
+        "card5 card6 card6 card4";
+        gap: 10px;
+    }    
 }
 
 
@@ -128,7 +171,7 @@ main {
     }
 
     nav {
-        background-color: white;
+        background-color: #F28482;
     }
     
     .navbar-brand {
@@ -181,5 +224,11 @@ main {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    
-}
+
+    .wholeBackground {
+        background-color:  #f5cac3;
+        size: 100%;
+        font-family: 'Nunito Sans', 'Arial', sans-serif;
+        font-size: 20px;
+    }
+} 
