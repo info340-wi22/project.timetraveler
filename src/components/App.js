@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import PetList from './EventList';
-import ComposeForm from './ComposeForm';
-import { LocationList } from './LocationList';
 import NavBar from './NavBar';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
-import Selection from './Type';
 import { Routes, Route } from 'react-router-dom';
+import Countdown from './Countdown'
 
 const LOCATION_LIST = [
   { "name": "Seattle" },
@@ -15,18 +12,22 @@ const LOCATION_LIST = [
 ];
 
 function App(props) {
-
+  const pets = props.pets;
   return (
     <div>
       <NavBar />
       <main>
+
+
         <Routes>
-          <Route path="home" element={<HomePage />} />
+          <Route path="/" element={<HomePage pets={pets}/>} />
+          <Route path="countdown" element={<Countdown />} />
           <Route path="about" element={<AboutPage />} />
         </Routes>
+
       </main>
       <footer className="container">
-        <small>Images from <a href="http://www.seattlehumane.org/adoption/name">Seattle Humane Society</a></small>
+        <small>&copy; INFO340WI22 | Group B1 </small>
       </footer>
     </div>
   );

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import PetList from './EventList';
 import ComposeForm from './ComposeForm';
 import { LocationList } from './LocationList';
-import NavBar from './NavBar';
 import Selection from './Type';
+
 
 const LOCATION_LIST = [
     { "name": "Seattle" },
@@ -11,7 +11,7 @@ const LOCATION_LIST = [
     { "name": "London" }
 ];
 
-function App(props) {
+function HomePage(props) {
     const [pets, setPets] = useState(props.pets);
     const [currentType, setCurrentType] = useState("Other");
 
@@ -38,6 +38,7 @@ function App(props) {
                     <div id="petList" className="col-9">
                         <PetList pets={pets} key={pets.id} />
                     </div>
+                    
                 </div>
                 <Selection whatType={currentType} typeCallBack={handleSelect} />
                 <div>
@@ -46,11 +47,8 @@ function App(props) {
 
                 <LocationList location={LOCATION_LIST} />
             </div>
-            <footer className="container">
-                <small>Images from <a href="http://www.seattlehumane.org/adoption/name">Seattle Humane Society</a></small>
-            </footer>
         </div>
     );
 }
 
-export default App;
+export default HomePage;

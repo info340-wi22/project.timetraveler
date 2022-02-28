@@ -22,7 +22,7 @@ export default function PetList(props) {
 
     return (
         <div>
-            <h2>Event List</h2>
+            <h2 className="subtitle">Event List</h2>
             <div className="card-deck">
                 {listPets}
             </div>

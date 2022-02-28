@@ -3,8 +3,8 @@ import React from 'react';
 export function LocationList(props) {
     let locations = props.location;
     return (
-        <div className='justify-content-center'>
-            <h1>Saved Location Time</h1>
+        <div>
+            <h1 className="subtitle">Saved Location Time</h1>
             {locations.map((location) => {
                 return <OneLocation location={location} key={location.name} />
             })}

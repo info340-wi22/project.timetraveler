@@ -13,18 +13,15 @@ export default function NavBar() {
                         <Nav className="mr-auto">
                             <ul className="navbar-nav" id="navigationLinks">
                                 <li className="nav-item">
-                                    <Link to="home">Home</Link>
+                                    <Link to="/" className="nav-link">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="about">About</Link>
+                                    <Link to="/countdown" className="nav-link">Countdown</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/about" className="nav-link">About</Link>
                                 </li>
 
-                                {/* <li className="nav-item">
-                                    <Nav.Link className="nav-link" href="#features">Event</Nav.Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Nav.Link className="nav-link" href="#features">About</Nav.Link>
-                                </li> */}
                             </ul>
                         </Nav>
                     </Navbar.Collapse>

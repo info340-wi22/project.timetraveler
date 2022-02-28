@@ -6,21 +6,39 @@ body {
     background-color: #1A2D47;
 }
 
-.card-deck .card {
-    flex-basis: 200px;
-    margin-bottom: 30px;
-    background-color: #FF7582;
-    border-radius: 10px;
+
+.subtitle {
     color: white;
 }
 
+.card-deck .card {
+    flex-basis: 200px;
+    margin-bottom: 30px;
+}
+.card-deck .card,
+.time1,
+.time2,
+.date1,
+.date2,
+.TUE1,
+.TUE2,
+.location-name {
+    border-radius: 10px;
+    color:black;
+}
+
+
+.location-name{
+    background-color: #FF7582;
+}
+
+.card-deck .card, 
 header {
-    background-color: #355C7D;
     margin-bottom: 80px;
 }
 
 .logo {
-    width: 100px;
+    width: 50px;
 }
 
 .time1,
@@ -28,16 +46,10 @@ header {
     font-size: 2rem;
     letter-spacing: 10px;
     font-family: 'Roboto', sans-serif;
-    color: white;
-    border-radius: 10px;
 }
 
 .time1 {
     background-color: #C56C86;
-}
-
-.time2 {
-    background-color: #355C7D;
 }
 
 .date1,
@@ -45,18 +57,25 @@ header {
     letter-spacing: .2px;
     padding-left: .3rem;
     padding-right: .3rem;
-    font-family: 'Bitter', serif;
-    color: white;
-    border-radius: 10px;
 }
 
 .date1,
-.TUE1 {
+.date2,
+.TUE1,
+.TUE2,
+.location-name {
+    font-family: 'Bitter', serif;
+}
+
+.date1,
+.TUE1{
     background-color: #725A7A;
 }
 
 .date2,
-.TUE2 {
+.TUE2,
+.time2,
+header {
     background-color: #355C7D;
 }
 
@@ -65,16 +84,9 @@ header {
     letter-spacing: 1px;
     padding-left: .8rem;
     padding-right: .8rem;
-    font-family: 'Bitter', serif;
-    color: white;
-    border-radius: 10px;
 }
 
 .location-name {
-    color: white;
-    background-color: #FF7582;
-    border-radius: 10px;
-    font-family: 'Bitter', serif;
     margin-bottom: 25px;
 }
 
@@ -120,3 +132,164 @@ footer {
     padding-left: 2rem;
     padding-right: 2rem;
 }
+
+/*countdown*/
+.until__title {
+    margin:auto;
+    text-align: center;
+    color:#C56C86;
+}
+.until{
+    margin: auto;
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:1em;
+    padding:1em;
+    background:#355C7D;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    font-family: sans-serif;
+}
+
+.until__component{
+    text-align: center;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.until__numeric {
+    color:#333333;
+    padding:.5em 0;
+    font-size:2em;
+    font-weight: bold;
+}
+
+.until__unit {
+    font-size: 1em;
+    padding-bottom: 1em;
+    font-weight: bold;
+    color: #C56C86;
+}
+
+.until__event {
+    grid-column: span 4;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Media Query */
+@media (min-width: 768px) {
+    nav {
+        background-color:#355C7D; 
+    }
+    
+    .time1, .time2 {
+        font-size: 3rem;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    
+    .mr-auto .navbar-nav .nav-item .nav-link {
+        color: white;
+    }
+    
+    .logo {
+        width: 75px;
+        margin-left: 3rem;
+    }
+  
+    .wholeBackground {
+        font-family: 'Nunito Sans', 'Arial', sans-serif;
+        font-size: 18px;
+    }
+  
+    .card-text {
+        display: inline;
+    }
+  
+    .until{
+        max-width: 700px;
+    }
+  
+  }
+  
+  
+  @media (min-width: 992px) {
+
+  
+  
+    .time1, .time2 {
+        font-size: 2rem;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    
+    .nav-item {
+        padding: 1rem;
+    }
+    
+   .mr-auto .navbar-nav .nav-item .nav-link {
+        color: #FF7582;
+        padding-left: 2rem;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+    
+    
+    .picture {
+        background: url(../public/img/timetravel.jpg);
+        width: 50%;
+        position: absolute;
+        background-size: cover;
+        left: 0px;
+        height: 100%;
+    }
+    
+    .text {
+        color: white;
+        width: 50%;
+        position: absolute;
+        right: 0px;
+        height: auto;
+    }
+    
+    .center {
+        text-align: center;
+        color: white;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .space {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+  
+    .wholeBackground {
+        size: 100%;
+        font-family: 'Nunito Sans', 'Arial', sans-serif;
+        font-size: 20px;
+    }
+  
+    .until{
+        max-width: 800px;
+        gap:2em;
+        padding:2em;
+    }
+    
+    .until__numeric {
+        font-size:5em;
+        font-weight: bold;
+    }
+    
+    .until__unit {
+        font-size: 2em;
+        padding-bottom: 1em;
+    }
+  } 
+  
