@@ -88,3 +88,36 @@ footer {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+
+.mr-auto .navbar-nav .nav-item .nav-link {
+    color: #FF7582;
+    padding: 1rem;
+    margin-left: auto;
+}
+
+.picture {
+    background-image: url(../public/imgs/timetravel.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.text {
+    color: white;
+    width: 100%;
+    position: absolute;
+    height: auto;
+}
+  
+.center {
+    text-align: center;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+  
+.space {
+    padding-left: 2rem;
+    padding-right: 2rem; 
+}
