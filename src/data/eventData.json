@@ -1,7 +1,7 @@
 [
-    {"name":"Zoom meeting with the design team at 8:00pm EST on June 16th 2022", "img":"img/zoommeeting.jpeg"},
-    {"name":"Allen's birthday party at O'Dea Restaurant at 6:00pm CST on August 20th 2022", "img":"img/party.jpeg"},
-    {"name":"France Getaway with Joe at 2:00pm PST on May 4th 2022", "img":"img/travel.jpeg"},
-    {"name":"Online Python lessons at 3:00pm PST on March 24th 2022","img":"img/lecture.jpeg"},
-    {"name":"Purchase a new real estate in NewYork at 4:00pm EST on December 4th 2022","img":"img/other.jpeg"}
-  ]
+  {"name":"Zoom meeting with the design team at 8:00pm EST on June 16th 2022", "img":"img/Meeting.jpeg"},
+  {"name":"Allen's birthday party at O'Dea Restaurant at 6:00pm CST on August 20th 2022", "img":"img/SocialEvent.jpeg"},
+  {"name":"France Getaway with Joe at 2:00pm PST on May 4th 2022", "img":"img/Travel.jpeg"},
+  {"name":"Online Python lessons at 3:00pm PST on March 24th 2022","img":"img/Lesson.jpeg"},
+  {"name":"Purchase a new real estate in NewYork at 4:00pm EST on December 4th 2022","img":"img/Other.jpeg"}
+]

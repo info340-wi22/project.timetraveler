@@ -9,6 +9,9 @@ body {
 .card-deck .card {
     flex-basis: 200px;
     margin-bottom: 30px;
+    background-color: #FF7582;
+    border-radius: 10px;
+    color: white;
 }
 
 header {

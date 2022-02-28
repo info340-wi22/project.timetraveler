@@ -9,7 +9,7 @@ export default function ComposeForm(props) {
     }
 
     const handleClick = (event) => {
-        props.howToAddCard(userInput, "img/zoommeeting.jpeg");
+        props.howToAddCard(userInput, props.whatType);
         setUserInput("");
     }
 
