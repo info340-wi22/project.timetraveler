@@ -6,7 +6,6 @@ body {
     background-color: #1A2D47;
 }
 
-<<<<<<< HEAD
 
 .subtitle {
     color: white;
@@ -28,24 +27,6 @@ body {
     color:black;
 }
 
-=======
-.card-deck .card {
-    flex-basis: 200px;
-    margin-bottom: 30px;
-}
-.card-deck .card,
-.time1,
-.time2,
-.date1,
-.date2,
-.TUE1,
-.TUE2,
-.location-name {
-    border-radius: 10px;
-    color:white;
-}
-
->>>>>>> 089c1589253ea2f973b44a382ddc1638640895ed
 
 .location-name{
     background-color: #FF7582;
@@ -82,22 +63,12 @@ header {
 .date2,
 .TUE1,
 .TUE2,
-<<<<<<< HEAD
 .location-name {
-=======
-.location-name,
-footer {
->>>>>>> 089c1589253ea2f973b44a382ddc1638640895ed
     font-family: 'Bitter', serif;
 }
 
 .date1,
-<<<<<<< HEAD
 .TUE1{
-=======
-.TUE1,
-footer {
->>>>>>> 089c1589253ea2f973b44a382ddc1638640895ed
     background-color: #725A7A;
 }
 
@@ -173,9 +144,9 @@ footer {
     padding-top: 10rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    color: white;
 }
 
-<<<<<<< HEAD
 .mr-auto .navbar-nav .nav-item .nav-link {
     color: #FF7582;
     padding: 1rem;
@@ -192,7 +163,7 @@ footer {
 .text {
     color: white;
     width: 100%;
-    position: absolute;
+    position: relative;
     height: auto;
 }
 
@@ -328,8 +299,8 @@ footer {
     .text {
         color: white;
         width: 50%;
-        position: absolute;
-        right: 0px;
+        position: relative;
+        left: 50%;
         height: auto;
     }
     
@@ -368,5 +339,3 @@ footer {
     }
   } 
   
-=======
->>>>>>> 089c1589253ea2f973b44a382ddc1638640895ed
