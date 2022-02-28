@@ -6,6 +6,7 @@ body {
     background-color: #1A2D47;
 }
 
+<<<<<<< HEAD
 
 .subtitle {
     color: white;
@@ -27,6 +28,24 @@ body {
     color:black;
 }
 
+=======
+.card-deck .card {
+    flex-basis: 200px;
+    margin-bottom: 30px;
+}
+.card-deck .card,
+.time1,
+.time2,
+.date1,
+.date2,
+.TUE1,
+.TUE2,
+.location-name {
+    border-radius: 10px;
+    color:white;
+}
+
+>>>>>>> 089c1589253ea2f973b44a382ddc1638640895ed
 
 .location-name{
     background-color: #FF7582;
@@ -63,12 +82,22 @@ header {
 .date2,
 .TUE1,
 .TUE2,
+<<<<<<< HEAD
 .location-name {
+=======
+.location-name,
+footer {
+>>>>>>> 089c1589253ea2f973b44a382ddc1638640895ed
     font-family: 'Bitter', serif;
 }
 
 .date1,
+<<<<<<< HEAD
 .TUE1{
+=======
+.TUE1,
+footer {
+>>>>>>> 089c1589253ea2f973b44a382ddc1638640895ed
     background-color: #725A7A;
 }
 
@@ -90,17 +119,63 @@ header {
     margin-bottom: 25px;
 }
 
+/*countdown*/
+.until__title {
+    margin:auto;
+    text-align: center;
+    color:#C56C86;
+}
+.until{
+    margin: auto;
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:1em;
+    padding:1em;
+    background:#355C7D;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    font-family: sans-serif;
+}
+
+.until__component{
+    text-align: center;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.until__numeric {
+    color:#333333;
+    padding:.5em 0;
+    font-size:2em;
+    font-weight: bold;
+}
+
+.until__unit {
+    font-size: 1em;
+    padding-bottom: 1em;
+    font-weight: bold;
+    color: #C56C86;
+}
+
+.until__event {
+    grid-column: span 4;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
 footer {
     display: flex;
     flex-shrink: 0;
     justify-content: center;
     padding-top: 10rem;
-    font-family: 'Bitter', serif;
-    color: #725A7A;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
+<<<<<<< HEAD
 .mr-auto .navbar-nav .nav-item .nav-link {
     color: #FF7582;
     padding: 1rem;
@@ -293,3 +368,5 @@ footer {
     }
   } 
   
+=======
+>>>>>>> 089c1589253ea2f973b44a382ddc1638640895ed

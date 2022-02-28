@@ -17,6 +17,7 @@ function App(props) {
     <div>
       <NavBar />
       <main>
+<<<<<<< HEAD
 
 
         <Routes>
@@ -25,6 +26,15 @@ function App(props) {
           <Route path="about" element={<AboutPage />} />
         </Routes>
 
+=======
+        {/* <Routes>
+          <Route path="home" element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="countdown" element={<CountdownPage/>} />
+        </Routes> */}
+        <Countdown />
+        {/* <HomePage /> */}
+>>>>>>> 089c1589253ea2f973b44a382ddc1638640895ed
       </main>
       <footer className="container">
         <small>&copy; INFO340WI22 | Group B1 </small>
