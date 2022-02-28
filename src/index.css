@@ -13,6 +13,7 @@ body {
 .card-deck .card {
     flex-basis: 200px;
     margin-bottom: 30px;
+    background-color: #FF7582;
 }
 
 .card-deck .card,
@@ -24,7 +25,7 @@ body {
 .TUE2,
 .location-name {
     border-radius: 10px;
-    color:black;
+    color:white;
 }
 
 
@@ -188,8 +189,8 @@ footer {
     
     .time1, .time2 {
         font-size: 3rem;
-        padding-left: 1px;
-        padding-right: 1px;
+        padding-left: 60px;
+        padding-right: 60px;
     }
     
     .mr-auto .navbar-nav .nav-item .nav-link {
