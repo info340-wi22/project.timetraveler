@@ -1,5 +1,5 @@
 import React , { useState } from 'react';
-import PetList from './EventList';
+import EventList from './EventList';
 import ComposeForm from './ComposeForm';
 import { LocationList } from './LocationList';
 import NavBar from './NavBar';
@@ -12,7 +12,7 @@ const LOCATION_LIST = [
 ];
 
 function App(props) {
-  const [pets, setPets] = useState(props.pets);
+  const [events, setEvents] = useState(props.events);
   const [currentType, setCurrentType] = useState("Other");
 
   const handleSelect = (img) => {
@@ -27,8 +27,8 @@ function App(props) {
       "name": name,
       "img": "/img/"+img+".jpeg",
     }
-    const newCardArray = [...pets, newCard];
-    setPets(newCardArray);
+    const newCardArray = [...events, newCard];
+    setEvents(newCardArray);
   }
 
     return (
@@ -38,8 +38,8 @@ function App(props) {
 
             <main className="container">
                 <div className="row">
-                    <div id="petList" className="col-9">
-                      <PetList pets={pets} key={pets.id}/>
+                    <div id="eventList" className="col-9">
+                      <EventList events={events} key={events.id}/>
                     </div>
                 </div>
                 <Selection whatType={currentType} typeCallBack={handleSelect}/>
@@ -48,7 +48,7 @@ function App(props) {
                 </div>
             </main> 
             <footer>
-              <div class="footer">
+              <div className="footer">
                 <p>&copy; TimeTraveler Team 2021</p>
               </div>
             </footer>
