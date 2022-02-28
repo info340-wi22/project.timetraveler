@@ -1,11 +1,10 @@
 import React from 'react';
-import NavBar from './NavBar';
+
 
 
 export default function AboutPage() {
     return (
         <div>
-            <NavBar />
             <main>
                 <div>
                     <img className="picture" src={"img/timetravel.jpg"} alt="timetravel-pic" />

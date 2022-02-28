@@ -1,8 +1,8 @@
 import React from 'react';
 
-function EventCard(props) {
-    let name = props.event.name;
-    let image = props.event.img;
+function PetCard(props) {
+    let name = props.pet.name;
+    let image = props.pet.img;
 
     return (
         <div className="card">
@@ -14,9 +14,9 @@ function EventCard(props) {
     )
 }
 
-export default function EventList(props) {
-    let listEvents = props.events.map((event) => {
-        let eachCard = <EventCard event={event} key={event.name}/>
+export default function PetList(props) {
+    let listPets = props.pets.map((pet) => {
+        let eachCard = <PetCard pet={pet} key={pet.name}/>
         return eachCard
     });
 
@@ -24,8 +24,8 @@ export default function EventList(props) {
         <div>
             <h2>Event List</h2>
             <div className="card-deck">
-                {listEvents}
+                {listPets}
             </div>
         </div> 
     )
-}; 
+};

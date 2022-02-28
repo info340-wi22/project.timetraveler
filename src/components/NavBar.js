@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, Navbar } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
     return (
@@ -12,17 +13,18 @@ export default function NavBar() {
                         <Nav className="mr-auto">
                             <ul className="navbar-nav" id="navigationLinks">
                                 <li className="nav-item">
-                                    <Nav.Link className="nav-link" href="#features">Home</Nav.Link>
+                                    <Link to="home">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Nav.Link className="nav-link" href="#features">Countdowm</Nav.Link>
+                                    <Link to="about">About</Link>
                                 </li>
-                                <li className="nav-item">
+
+                                {/* <li className="nav-item">
                                     <Nav.Link className="nav-link" href="#features">Event</Nav.Link>
                                 </li>
                                 <li className="nav-item">
                                     <Nav.Link className="nav-link" href="#features">About</Nav.Link>
-                                </li>
+                                </li> */}
                             </ul>
                         </Nav>
                     </Navbar.Collapse>
