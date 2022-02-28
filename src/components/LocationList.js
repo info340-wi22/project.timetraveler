@@ -1,11 +1,15 @@
 import React from 'react';
+const LOCATION_LIST = [
+    { "name": "Seattle" },
+    { "name": "Shanghai" },
+    { "name": "London" }
+];
 
-export function LocationList(props) {
-    let locations = props.location;
+export function LocationList() {
     return (
         <div>
             <h1 className="subtitle">Saved Location Time</h1>
-            {locations.map((location) => {
+            {LOCATION_LIST.map((location) => {
                 return <OneLocation location={location} key={location.name} />
             })}
         </div>
@@ -19,7 +23,7 @@ function OneLocation(props) {
             <div className="location container">
                 <div className="row">
                     <div className="col-md-12" >
-                        <h1 className="location-name px-1" >{location}</h1>
+                        <h2 className="location-name px-1" >{location}</h2>
                     </div>
                     <div className="col-md-12 col-lg-6">
                         <div className="time1" > 7: 52 </div>

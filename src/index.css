@@ -6,7 +6,6 @@ body {
     background-color: #1A2D47;
 }
 
-
 .subtitle {
     color: white;
 }
@@ -15,6 +14,7 @@ body {
     flex-basis: 200px;
     margin-bottom: 30px;
 }
+
 .card-deck .card,
 .time1,
 .time2,
@@ -136,7 +136,7 @@ header {
     font-weight: bold;
 }
 
-
+/*footer*/
 footer {
     display: flex;
     flex-shrink: 0;
@@ -147,6 +147,7 @@ footer {
     color: white;
 }
 
+/*nav bar*/
 .mr-auto .navbar-nav .nav-item .nav-link {
     color: #FF7582;
     padding: 1rem;
@@ -179,52 +180,6 @@ footer {
     padding-right: 2rem;
 }
 
-/*countdown*/
-.until__title {
-    margin:auto;
-    text-align: center;
-    color:#C56C86;
-}
-.until{
-    margin: auto;
-    max-width: 450px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:1em;
-    padding:1em;
-    background:#355C7D;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    font-family: sans-serif;
-}
-
-.until__component{
-    text-align: center;
-    background: #ffffff;
-    border-radius: 5px;
-}
-
-.until__numeric {
-    color:#333333;
-    padding:.5em 0;
-    font-size:2em;
-    font-weight: bold;
-}
-
-.until__unit {
-    font-size: 1em;
-    padding-bottom: 1em;
-    font-weight: bold;
-    color: #C56C86;
-}
-
-.until__event {
-    grid-column: span 4;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-}
-
 /* Media Query */
 @media (min-width: 768px) {
     nav {
@@ -233,8 +188,8 @@ footer {
     
     .time1, .time2 {
         font-size: 3rem;
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 1px;
+        padding-right: 1px;
     }
     
     .mr-auto .navbar-nav .nav-item .nav-link {
@@ -258,13 +213,15 @@ footer {
     .until{
         max-width: 700px;
     }
-  
+    
+    .card-deck .card {
+        flex-basis: 250px;
+        margin-bottom: 35px;
+    }
   }
   
-  
+  /* Media Query */
   @media (min-width: 992px) {
-
-  
   
     .time1, .time2 {
         font-size: 2rem;

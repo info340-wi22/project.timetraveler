@@ -8,7 +8,7 @@ function PetCard(props) {
         <div className="card">
             <img className="card-img-top" src={image} alt={name} />
             <div className="card-body">
-                <h3 className="card-title">{name}</h3>
+                <h2 className="card-title">{name}</h2>
             </div>
         </div>
     )
@@ -22,7 +22,7 @@ export default function PetList(props) {
 
     return (
         <div>
-            <h2 className="subtitle">Event List</h2>
+            <h1 className="subtitle">Event List</h1>
             <div className="card-deck">
                 {listPets}
             </div>

@@ -4,13 +4,6 @@ import ComposeForm from './ComposeForm';
 import { LocationList } from './LocationList';
 import Selection from './Type';
 
-
-const LOCATION_LIST = [
-    { "name": "Seattle" },
-    { "name": "Shanghai" },
-    { "name": "London" }
-];
-
 function HomePage(props) {
     const [pets, setPets] = useState(props.pets);
     const [currentType, setCurrentType] = useState("Other");
@@ -44,8 +37,7 @@ function HomePage(props) {
                 <div>
                     <ComposeForm howToAddCard={addCard} whatType={currentType} />
                 </div>
-
-                <LocationList location={LOCATION_LIST} />
+                <LocationList />
             </div>
         </div>
     );

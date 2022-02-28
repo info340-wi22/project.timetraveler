@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavBar from './NavBar';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import { Routes, Route } from 'react-router-dom';
 import Countdown from './Countdown'
-
-const LOCATION_LIST = [
-  { "name": "Seattle" },
-  { "name": "Shanghai" },
-  { "name": "London" }
-];
 
 function App(props) {
   const pets = props.pets;
