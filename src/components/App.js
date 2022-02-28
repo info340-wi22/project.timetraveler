@@ -1,6 +1,14 @@
 import React , { useState } from 'react';
 import PetList from './EventList';
 import ComposeForm from './ComposeForm';
+import { LocationList } from './LocationList';
+import NavBar from './NavBar';
+
+const LOCATION_LIST = [
+  { "name": "Seattle" },
+  { "name": "Shanghai" },
+  { "name": "London" }
+];
 
 function App(props) {
     const [pets, setPets] = useState(props.pets);
@@ -16,6 +24,9 @@ function App(props) {
 
     return (
         <div>
+            <NavBar />
+            <LocationList location={LOCATION_LIST} />
+
             <main className="container">
             <div className="row">
                 <div id="petList" className="col-9">

@@ -31,12 +31,12 @@ header {
     font-size: 1.5rem;
 } 
 
-.picture {
+/* .picture {
     background-image: url(../img/timetravel.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
-}
+} */
 
 .text {
     background-color: #6A7EAD;
@@ -361,14 +361,14 @@ img{
         width: 200px;
     }
     
-    .picture {
+    /* .picture {
         background: url(../img/timetravel.jpg);
         width: 50%;
         position: absolute;
         background-size: cover;
         left: 0px;
         height: 100%;
-    }
+    } */
     
     .text {
         background-color: #6A7EAD;
