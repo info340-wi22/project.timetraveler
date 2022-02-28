@@ -7,6 +7,7 @@ import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import Selection from './Type';
 import { Routes, Route } from 'react-router-dom';
+import Countdown from './Countdown'
 
 const LOCATION_LIST = [
   { "name": "Seattle" },
@@ -20,10 +21,13 @@ function App(props) {
     <div>
       <NavBar />
       <main>
-        <Routes>
+        {/* <Routes>
           <Route path="home" element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
-        </Routes>
+          <Route path="countdown" element={<CountdownPage/>} />
+        </Routes> */}
+        <Countdown />
+        {/* <HomePage /> */}
       </main>
       <footer className="container">
         <small>Images from <a href="http://www.seattlehumane.org/adoption/name">Seattle Humane Society</a></small>
