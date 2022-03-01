@@ -15,8 +15,8 @@ function PetCard(props) {
 }
 
 export default function PetList(props) {
-    let listPets = props.pets.map((pet) => {
-        let eachCard = <PetCard pet={pet} key={pet.name}/>
+    let listPets = props.pets.map((pet, index) => {
+        let eachCard = <PetCard pet={pet} key={index}/>
         return eachCard
     });
 

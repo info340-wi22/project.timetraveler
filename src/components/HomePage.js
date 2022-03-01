@@ -9,9 +9,6 @@ function HomePage(props) {
     const [currentType, setCurrentType] = useState("Other");
 
     const handleSelect = (img) => {
-        if (img == '') {
-            img = "Other";
-        }
         setCurrentType(img);
     }
 
