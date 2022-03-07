@@ -2,6 +2,104 @@
     box-sizing: border-box;
 }
 
+.type {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    font-family: 'Bitter', serif;
+    background-color: #FF7582;
+    color: white;
+    border-radius: 10px;
+    padding-left: 1.5rem;
+}
+
+.starttime,
+.endtime {
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #C56C86;
+    color: white;
+    border-radius: 10px;
+    padding-left: 1.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    position: center;
+    margin: 3px;
+}
+
+.endtime {
+    background-color: #355C7D;
+}
+
+input[type=time],
+input[type=date] {
+    border: none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type=time]::-webkit-datetime-edit-ampm-field {
+    display: none;
+}
+
+.margindesign {
+    width: 70%;
+    margin: 80px 15% 0 15%;
+}
+
+.form-control {
+    border: none;
+}
+
+button {
+    width: 50px;
+    background-color: #1A2D47;
+}
+
+button span {
+    color: pink;
+}
+
+.margindesignnumber2 {
+    margin-top: 80px;
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+.starttimezone,
+.startday,
+.startweekday,
+.startdate,
+.endtimezone,
+.endday,
+.endweekday,
+.enddate {
+    text-align: center;
+    letter-spacing: 1px;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    font-family: 'Bitter', serif;
+    background-color: #725A7A;
+    color: white;
+    border-radius: 10px;
+    margin: .2rem;
+}
+
+
+/* ::placeholder { 
+    opacity: 1;
+  } */
+
+.endtimezone,
+.endday,
+.endweekday,
+.enddate {
+    background-color: #355C7D;
+    ;
+}
+
 .nav-link {
     color: #FF7582;
 }
@@ -11,7 +109,8 @@ header {
     margin-bottom: 80px;
 }
 
-.until, .until__title {
+.until,
+.until__title {
     font-family: "Baloo da 2", cursive;
 }
 
@@ -29,7 +128,8 @@ header {
 
 .fa-1x {
     font-size: 1.5rem;
-} 
+}
+
 
 /* .picture {
     background-image: url(../img/timetravel.jpg);
@@ -38,7 +138,8 @@ header {
     background-size: cover;
 } */
 
-.text {
+
+/*.text {
     background-color: #6A7EAD;
     color: white;
     width: 100%;
@@ -56,72 +157,14 @@ header {
 .space {
     padding-left: 2rem;
     padding-right: 2rem;
-}
+} */
 
-.time1 {
-    font-size: 2rem;
-    letter-spacing: 10px; 
-    font-family: 'Roboto', sans-serif;
-    background-color: #C56C86;
-    color: white;
-    border-radius: 10px;
-}
-
-.time2 {
-    font-size: 2rem;
-    letter-spacing: 10px; 
-    font-family: 'Roboto', sans-serif;
-    background-color: #355C7D;
-    color: white;
-    border-radius: 10px;
-}
-
-.container {
-    min-width: 0;
-}
-
-.date1 {
-    letter-spacing: .2px; 
-    padding-left: .3rem;
-    padding-right: .3rem;
-    font-family: 'Bitter', serif;
-    background-color: #725A7A;
-    color: white;
-    border-radius: 10px;
-}
-
-.date2 {
-    letter-spacing: .2px; 
-    padding-left: .3rem;
-    padding-right: .3rem;
-    font-family: 'Bitter', serif;
-    background-color: #355C7D;
-    color: white;
-    border-radius: 10px;
-}
-
-.TUE1 {
-    letter-spacing: 1px; 
-    padding-left: .8rem;
-    padding-right: .8rem;
-    font-family: 'Bitter', serif;
-    background-color: #725A7A;
-    color: white;
-    border-radius: 10px;
-}
-.TUE2 {
-    letter-spacing: 1px; 
-    padding-left: .8rem;
-    padding-right: .8rem;
-    font-family: 'Bitter', serif;
-    background-color: #355C7D;
-    color: white;
-    border-radius: 10px;
-}
 body {
     background-color: #1A2D47;
 }
 
+
+/*
 .location-name {
     color: white;
     background-color: #FF7582;
@@ -162,9 +205,10 @@ footer {
     color: #725A7A;
     padding-left: 1rem;
     padding-right: 1rem;
-}
+} */
 
-/*countdown default*/
+
+/*countdown default
 .until__title {
     margin:auto;
     text-align: center;
@@ -208,19 +252,21 @@ footer {
     text-align: center;
     color: #ffffff;
     font-weight: bold;
-}
+} */
 
-/* Event List */
+
+/* Event List 
 .wholeBackground {
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     margin: 0;
     font-size: 16px;
-}
+} */
 
-.containerBox {
+
+/* .containerBox {
     /*grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 0.2fr 0.4fr 0.2fr 0.4fr 0.4fr;
-    */
+    
     grid-template-areas: 
         "card1"
         "card2"
@@ -228,9 +274,10 @@ footer {
         "card4"
         "card5"
         "card6";
-}
+}  */
 
-img{
+
+/* img{
     width: 75%;
     height: 75%;
     object-fit: cover;
@@ -266,9 +313,10 @@ img{
 
 .containerFooter {
     color: white;
-}
+} */
 
-/* Media Query */
+
+/* Media Query 
 @media (min-width: 768px) {
     nav {
         background-color:#355C7D; 
@@ -369,8 +417,9 @@ img{
         left: 0px;
         height: 100%;
     } */
-    
-    .text {
+
+
+/* .text {
         background-color: #6A7EAD;
         color: white;
         width: 50%;
@@ -412,4 +461,4 @@ img{
         font-size: 2em;
         padding-bottom: 1em;
     }
-} 
+} */
