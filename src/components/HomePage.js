@@ -1,41 +1,30 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 // import DisplayedBlock from './DeleteOrDisplay';
 import ComposeForm from './CreateBlock';
-import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
+import { getDatabase, ref, /* set as firebaseSet */ push as firebasePush} from 'firebase/database';
 import EventList from './EventList';
-import { FilterSection } from './FilterSection';
+import { useReducer } from 'react';
+// import { FilterSection } from './FilterSection';
 
 
 function HomePage(props) {
-    const eventListRef = props.eventListRef;
-    const [events, setEvents] = useState(props.currentEventList);
+    const db = getDatabase();
+    // const [events, setEvents] = useState(props.currentEventList);
 
-    //useEffect update firebase data
-    useEffect(() => {
-        firebaseSet(eventListRef, { events })
-            .then(() => console.log("data saved successfully!"))
-            .catch(err => console.log(err));
-    })
-
-
-    function handleFilter(input) {
-        let eventType = input.target.id;
-        let cardsCopy = events;
-        console.log(cardsCopy);
-        if (eventType !== 'ShowAllEvents') {
-            cardsCopy = events.filter(
-                (event) => event.EventType.split(' ').join('') === eventType
-            );
-        }
-        console.log(cardsCopy);
-        setEvents(cardsCopy);
-    }
+    // function handleFilter(input) {
+    //     let eventType = input.target.id;
+    //     let cardsCopy = events;
+    //     console.log(cardsCopy);
+    //     if (eventType !== 'ShowAllEvents') {
+    //         cardsCopy = events.filter(
+    //             (event) => event.EventType.split(' ').join('') === eventType
+    //         );
+    //     }
+    //     console.log(cardsCopy);
+    //     setEvents(cardsCopy);
+    // }
 
     const addCard = (StartDate, StartTime, StartTimezone, StartWeekDay, EndDate, EndTime, EndTimezone, EndWeekDay, EventType, Description) => {
-        // if (events.length > 0) {
-        //     let newId = events[events.length - 1].id + 1
-        // }
-
         let newCard = {
             "StartDate": StartDate,
             "StartTime": StartTime,
@@ -47,18 +36,23 @@ function HomePage(props) {
             "EndWeekDay": EndWeekDay,
             "EventType": EventType,
             "Description": Description,
-        }
-        const newCardArray = [...events, newCard];
-        setEvents(newCardArray);
+        } 
+        const eventListRef = ref(db, "eventList/" + props.currentUser.uid);
+        firebasePush(eventListRef, newCard)
+        .then(() => console.log("pushed!"))
+        .catch((err) => console.log(err));  
+        // const newCardArray = [...events, newCard];
+        // setEvents(newCardArray);
     }
-    if (events == "") {
+
+    if (props.eventListRef  == "") {
         return (
             <div>
-                <FilterSection
+                {/* <FilterSection
                     data={events}
 
                     handleFilter={handleFilter}
-                />
+                /> */}
                 <ComposeForm howToAddCard={addCard} />
             </div>
         );
@@ -66,15 +60,15 @@ function HomePage(props) {
         return (
             <div>
                 <div>
-                    <FilterSection
+                    {/* <FilterSection
                         data={events}
 
                         handleFilter={handleFilter}
-                    />
+                    /> */}
                     <ComposeForm howToAddCard={addCard} />
                 </div>
                 <div>
-                    <EventList events={events} />
+                    <EventList events={props.currentEventList} />
                 </div>
             </div>
         );

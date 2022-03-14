@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default function EventList(props) {
+    console.log(props);
     let eventList = props.events.map((event) => {
         let eachEvent = <Event event={event} key={event.Description}/>;
         return eachEvent;
     })
-    console.log(eventList);
     return (
         <div>
             {eventList}

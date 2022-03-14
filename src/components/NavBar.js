@@ -30,7 +30,7 @@ export default function NavBar(props) {
                                 <li className="nav-item">
                                     <Link to="/about" className="nav-link">About</Link>
                                 </li>
-                                <li activeClassName="linkElement">
+                                <li className="linkElement">
                                     <Button className="signout" onClick={handleClick} aria-label="sign out">Sign Out</Button>
                                 </li>
                             </ul>

@@ -7,14 +7,17 @@ import NavBar from './NavBar';
 import HomePage from './HomePage';
 import SignInPage from './SignInPage';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import CloseEvent from './CloseEvent';
 
 function App() {
   const db = getDatabase();
-  const [currentEventList, setCurrentEventList] = useState("");
-  const eventListRef = ref(db, "eventList");
-
+  const [currentEventList, setCurrentEventList] = useState([]);
+  const [currentUser, setCurrentUser] = useState(undefined);
+  
   useEffect(() => {
+    if(currentUser == undefined) {
+      return;
+    }
+    const eventListRef = ref(db, "eventList/" + currentUser.uid);
     const offFunction = onValue(eventListRef, (snapshot) => {
       const allDataValue = snapshot.val();
       if (allDataValue != null) {
@@ -30,9 +33,7 @@ function App() {
       offFunction();
     }
     return cleanup;
-  }, [db])
-
-  const [currentUser, setCurrentUser] = useState(undefined);
+  }, [currentUser])
 
   useEffect(() => {
     const auth = getAuth();
@@ -57,11 +58,10 @@ function App() {
         <NavBar auth={getAuth()} />
         <main>
           <Routes>
-            <Route path="/" element={<HomePage currentEventList={currentEventList} eventListRef={eventListRef} />} />
+            <Route path="/" element={<HomePage currentEventList={currentEventList} currentUser={currentUser}/>} />
             <Route path="countdown" element={<Countdown currentEventList={currentEventList} />} />
             <Route path="about" element={<Static.AboutPage />} />
             <Route path="*" element={<Static.ErrorPage />} />
-            <Route path="/countdown/closeevent/:eventId" element={<CloseEvent/>} />
           </Routes>
 
         </main>
@@ -76,33 +76,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-// function App(props) {
-
-
-//     /* const auth = getAuth();
-//     const [user, loading, error] = useAuthState(auth);
-//     const currentUser = user;
-//     const loginUser = (userId, userName) => {}; */
-//     return (
-//       <div>
-//         <NavBar />
-//         <main>
-//           <Routes>
-//             <Route path="/" element={<EventList currentEventList={currentEventList} />} />
-//             <Route path="countdown" element={<Countdown />} />
-//             <Route path="about" element={<AboutPage />} />
-//             {/* <Route path="signin" element={<SignInPage  user={currentUser} loginFunction={loginUser} /> } /> */}
-//           </Routes>
-
-//         </main>
-//         <footer className="container">
-//           <small>&copy; INFO340WI22 | Group B1 </small>
-//         </footer>
-//       </div>
-//     );
-//   }
-// export default App;
