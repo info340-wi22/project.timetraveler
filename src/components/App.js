@@ -4,7 +4,7 @@ import { getDatabase, ref, onValue } from "firebase/database";
 import Countdown from './Countdown';
 import * as Static from './StaticPage';
 import NavBar from './NavBar';
-import AboutPage from './AboutPage';
+import HomePage from './HomePage';
 import SignInPage from './SignInPage';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
