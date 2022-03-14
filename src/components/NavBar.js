@@ -14,8 +14,8 @@ export default function NavBar(props) {
     };
     return (
         <header>
-            <div className="container-fluid">
-                < img className="logo" src={"img/logo.jpg"} alt="logo" />
+            <div className="container-fluid d-flex justify-content-between">
+                <img className="logo" src={"img/logo.jpg"} alt="logo" />
                 <Navbar className="hamburger" collapseOnSelect expand="lg">
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

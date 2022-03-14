@@ -28,7 +28,7 @@ function Event(props) {
                             <div className="container timeContainer">
                                 <div className="row">
                                     <div className="d-flex">
-                                        <div className="col-6">
+                                        <div className="col-6 starttime">
                                             <div>{event.StartTime}</div> 
                                         </div>
                                         <div className="col-6">
@@ -53,7 +53,7 @@ function Event(props) {
 
                                 <div className="row">
                                     <div className="d-flex">
-                                        <div className="col-6">
+                                        <div className="col-6 endtime">
                                             <div>{event.EndTime}</div> 
                                         </div>
                                         <div className="col-6">
@@ -78,14 +78,8 @@ function Event(props) {
                             </div>
                         </div>
 
-                        <div className="col-lg-6">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-12">
-                                        <div>{event.Description}</div> 
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="col-lg-6 input-txt">
+                            <div>{event.Description}</div> 
                         </div>
                     </div>
                 </div>

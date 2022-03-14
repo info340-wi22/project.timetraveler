@@ -83,8 +83,8 @@ export default function ComposeForm(props) {
 
     return (
         <div className="container margindesign">
-            <div className="row col-12 eventTypeMarginDesign">
-                <Dropdown className="type">
+            <div className="row col-12 MarginDesign">
+                <Dropdown className="eventType">
                     <Dropdown.Toggle>
                         {currentType}
                     </Dropdown.Toggle>
@@ -97,7 +97,7 @@ export default function ComposeForm(props) {
 
             <div className="row">
                 <div className="container">
-                    <div className="d-flex">
+                    <div className="d-flex flex-wrap">
                         <div className="col-lg-6">
                             <div className="container timeContainer">
                                 <div className="row">
