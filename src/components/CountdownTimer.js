@@ -9,15 +9,15 @@ const defaultRemainingTime = {
     days: '00'
 }
 
-const CountdownTimer = ({props}) => {
+const CountdownTimer = ({timeInSeconds}) => {
     const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
 
     useEffect(() => {
         const intervalId = setInterval(() =>{
-            updateRemainingTime(props);
+            updateRemainingTime(timeInSeconds);
         }, 1000);
         return () => clearInterval(intervalId)
-    }, [props])
+    }, [timeInSeconds])
 
     function updateRemainingTime(countdown) {
         setRemainingTime(getRemainingTime(countdown));
@@ -41,7 +41,7 @@ const CountdownTimer = ({props}) => {
                         <div className="until__numeric until__numeric--seconds">{remainingTime.seconds}</div>
                         <div className="until__unit">seconds</div>
                     </div>
-                    <div className="until__event">Until ...</div>
+                    <div className="until__event">It's Soon !!!</div>
         </div>
     );
 }

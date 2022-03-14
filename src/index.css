@@ -185,7 +185,9 @@ button span {
   }
 
 /* countdown Page */
+.close_event_info,
 .until__title {
+    padding-top: 2rem;
     font-family: "Baloo da 2", cursive;
     margin:auto;
     text-align: center;

@@ -43,19 +43,8 @@ function getRemainingDays(nowDaysjs, timestampDayjs) {
     return days.toString();
 }
 
-// function getRemainingMonth(nowDaysjs, timestampDayjs) {
-//     const month = timestampDayjs.diff(nowDaysjs, 'Month');
-//     return month.toString();
-// }
-
-// function getRemainingYear(nowDaysjs, timestampDayjs) {
-//     const year = timestampDayjs.diff(nowDaysjs, 'Year');
-//     return year.toString();
-// }
-
-
 function padWithZeros(number, minLength) {
     const numberString = number.toString();
     if (numberString.length >= minLength) return numberString;
-    return "0".repeat(minLength - numberString.length) + numberString
+    return "0".repeat(minLength - numberString.length) + numberString;
 }

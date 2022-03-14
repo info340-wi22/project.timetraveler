@@ -7,6 +7,7 @@ import NavBar from './NavBar';
 import HomePage from './HomePage';
 import SignInPage from './SignInPage';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import CloseEvent from './CloseEvent';
 
 function App() {
   const db = getDatabase();
@@ -60,6 +61,7 @@ function App() {
             <Route path="countdown" element={<Countdown currentEventList={currentEventList} />} />
             <Route path="about" element={<Static.AboutPage />} />
             <Route path="*" element={<Static.ErrorPage />} />
+            <Route path="/countdown/closeevent/:eventId" element={<CloseEvent/>} />
           </Routes>
 
         </main>
