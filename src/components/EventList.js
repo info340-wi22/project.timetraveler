@@ -1,31 +1,96 @@
 import React from 'react';
 
-function PetCard(props) {
-    let name = props.pet.name;
-    let image = props.pet.img;
-
-    return (
-        <div className="card">
-            <img className="card-img-top" src={image} alt={name} />
-            <div className="card-body">
-                <h2 className="card-title">{name}</h2>
-            </div>
-        </div>
-    )
-}
-
-export default function PetList(props) {
-    let listPets = props.pets.map((pet, index) => {
-        let eachCard = <PetCard pet={pet} key={index}/>
-        return eachCard
-    });
-
+export default function EventList(props) {
+    let eventList = props.events.map((event) => {
+        let eachEvent = <Event event={event} key={event.Description}/>;
+        return eachEvent;
+    })
+    console.log(eventList);
     return (
         <div>
-            <h1 className="subtitle">Event List</h1>
-            <div className="card-deck">
-                {listPets}
-            </div>
+            {eventList}
         </div> 
-    )
-};
+    );
+}
+
+function Event(props) {
+    const event = props.event;
+    return (
+        <div className="container margindesign">
+            <div className="row col-12 eventTypeMarginDesign"> 
+                <p className="eventType">{event.EventType}</p >
+            </div>
+
+            <div className="row">
+                <div className="container">
+                    <div className="d-flex flex-wrap">
+                        <div className="col-lg-6">
+                            <div className="container timeContainer">
+                                <div className="row">
+                                    <div className="d-flex">
+                                        <div className="col-6">
+                                            <div>{event.StartTime}</div> 
+                                        </div>
+                                        <div className="col-6">
+                                            <div className="container">
+                                                <div className="row">
+                                                    <div className="col startdateCol">
+                                                        <div>{event.StartDate}</div> 
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col width47 startweekdayCol">
+                                                        <div>{event.StartWeekDay}</div> 
+                                                    </div>
+                                                    <div className="col width47 starttimezoneCol">
+                                                        <div>{event.StartTimezone}</div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="d-flex">
+                                        <div className="col-6">
+                                            <div>{event.EndTime}</div> 
+                                        </div>
+                                        <div className="col-6">
+                                            <div className="container">
+                                                <div className="row">
+                                                    <div className="col enddateCol">
+                                                        <div>{event.EndDate}</div> 
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col width47 endweekdayCol">
+                                                        <div>{event.EndWeekDay}</div> 
+                                                    </div>
+                                                    <div className="col width47 endtimezoneCol">
+                                                        <div>{event.EndTimezone}</div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div>{event.Description}</div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+

@@ -6,98 +6,185 @@ body {
     background-color: #1A2D47;
 }
 
-.subtitle {
-    color: white;
-}
-
-.card-deck .card {
-    flex-basis: 200px;
-    margin-bottom: 30px;
-    background-color: #FF7582;
-}
-
-.card-deck .card,
-.time1,
-.time2,
-.date1,
-.date2,
-.TUE1,
-.TUE2,
-.location-name {
-    border-radius: 10px;
-    color:white;
-}
-
-
-.location-name{
-    background-color: #FF7582;
-}
-
-.card-deck .card, 
+/* header */
 header {
-    margin-bottom: 80px;
+    background-color: #355C7D;
+    /* margin-bottom: 40px; */
+}
+
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .logo {
     width: 50px;
 }
 
-.time1,
-.time2 {
-    font-size: 2rem;
-    letter-spacing: 10px;
-    font-family: 'Roboto', sans-serif;
+.nav-link {
+    color: #FF7582;
 }
 
-.time1 {
-    background-color: #C56C86;
+#navigationLinks {
+    margin-left: auto;
 }
 
-.date1,
-.date2 {
-    letter-spacing: .2px;
-    padding-left: .3rem;
-    padding-right: .3rem;
+.nav-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-.date1,
-.date2,
-.TUE1,
-.TUE2,
-.location-name {
+.fa-1x {
+    font-size: 1.5rem;
+}
+
+/* home page */
+.margindesign {
+    width: 70%;
+    margin: 40px 5% 0 5%;
+    padding: 0px;
+}
+
+.eventTypeMarginDesign {
+    margin: 0px;
+} 
+
+.eventType {
+    font-size: 1rem;
+    letter-spacing: .2rem;
     font-family: 'Bitter', serif;
+    background-color: #FF7582;
+    color: white;
+    border-radius: 10px;
+    width: 50%;
 }
 
-.date1,
-.TUE1{
+.timeContainer {
+    padding: 0px;
+}
+
+.starttime,
+.endtime {
+    font-size: 1.5rem;
+    letter-spacing: .6rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #C56C86;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-bottom: .4rem;
+}
+
+input[type=time],
+input[type=date],
+input[type=text],
+.form-control {
+    border: none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-datetime-edit-ampm-field,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.starttimezoneCol,
+.startweekdayCol,
+.startdateCol,
+.endtimezoneCol,
+.endweekdayCol,
+.enddateCol {
+    text-align: center;
+    letter-spacing: .2rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    font-family: 'Bitter', serif;
+    font-size: .5rem;
     background-color: #725A7A;
+    color: white;
+    border-radius: 10px;
+    margin-right: .2rem;
+    margin-bottom: .2rem;
+    height: 24px;
 }
 
-.date2,
-.TUE2,
-.time2,
-header {
+.startweekday,
+.starttimezone, 
+.startweekday,
+.starttimezone,
+.endweekday,
+.endtimezone {
+    padding-top: .4rem;
+}
+
+.startdate,
+.enddate,
+.startweekday,
+.endweekday,
+.starttimezone,
+.endtimezone {
+    background-color: #725A7A;
+    color: white;
+    font-size: .5rem;
+    letter-spacing: .2rem;
+    padding-top: .4rem;
+    padding-left: 1.2rem;
+}
+
+.endtimezoneCol,
+.enddayCol,
+.endweekdayCol,
+.enddateCol,
+.enddate, 
+.endtime,
+.endweekday,
+.endtimezone {
     background-color: #355C7D;
 }
 
-.TUE1,
-.TUE2 {
-    letter-spacing: 1px;
-    padding-left: .8rem;
-    padding-right: .8rem;
+.width48 {
+    flex: 0 0 auto;
+    width: 47%;
 }
 
-.location-name {
-    margin-bottom: 25px;
+.width90 {
+    width: 90%;
+    padding-left: 25%;
 }
 
-/*countdown*/
+.input-txt {
+    font-family: 'Bitter', serif;;
+    font-size: 12px;
+    /* not working, why?? */
+    color: white;
+}
+
+textarea {
+    height: 100px;
+}
+
+.material-icons {
+    font-size: 16px;
+}
+
+button span {
+    color: #FF7582;
+}
+
+::placeholder {
+    color: white;
+  }
+
+/* countdown Page */
 .until__title {
+    font-family: "Baloo da 2", cursive;
     margin:auto;
     text-align: center;
     color:#C56C86;
 }
 .until{
+    font-family: "Baloo da 2", cursive;
     margin: auto;
     max-width: 450px;
     display: grid;
@@ -135,37 +222,20 @@ header {
     text-align: center;
     color: #ffffff;
     font-weight: bold;
-}
+} 
 
-/*footer*/
-footer {
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    padding-top: 10rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: white;
-}
-
-/*nav bar*/
-.mr-auto .navbar-nav .nav-item .nav-link {
-    color: #FF7582;
-    padding: 1rem;
-    margin-left: auto;
-}
-
-.picture {
-    background-image: url(../public/img/timetravel.jpg);
+/* .picture {
+    background-image: url(../img/timetravel.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
 }
 
 .text {
+    background-color: #6A7EAD;
     color: white;
     width: 100%;
-    position: relative;
+    position: absolute;
     height: auto;
 }
 
@@ -181,105 +251,56 @@ footer {
     padding-right: 2rem;
 }
 
-/* Media Query */
-@media (min-width: 768px) {
-    nav {
-        background-color:#355C7D; 
-    }
-    
-    .time1, .time2 {
-        font-size: 3rem;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-    
-    .mr-auto .navbar-nav .nav-item .nav-link {
-        color: white;
-    }
-    
-    .logo {
-        width: 75px;
-        margin-left: 3rem;
-    }
-  
-    .wholeBackground {
-        font-family: 'Nunito Sans', 'Arial', sans-serif;
-        font-size: 18px;
-    }
-  
-    .card-text {
-        display: inline;
-    }
-  
-    .until{
-        max-width: 700px;
-    }
-    
-    .card-deck .card {
-        flex-basis: 250px;
-        margin-bottom: 35px;
-    }
-  }
-  
-  /* Media Query */
-  @media (min-width: 992px) {
-  
-    .time1, .time2 {
-        font-size: 2rem;
-        padding-left: 1px;
-        padding-right: 1px;
-    }
+.guide span {
+    color: #FF7582;
+}
 
-    
-    .nav-item {
-        padding: 1rem;
-    }
-    
-   .mr-auto .navbar-nav .nav-item .nav-link {
-        color: #FF7582;
-        padding-left: 2rem;
-    }
-    
+.guide {
+    display: flex;
+    text-align: center;
+    padding-top: 10rem;
+    font-family: 'Bitter', serif;
+    color: #725A7A;
+    padding-left: 1rem;
+    padding-right: 1rem;
+} */
+
+footer {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    padding-top: 10rem;
+    font-family: 'Bitter', serif;
+    color: #725A7A;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+/* Media Query  */
+@media (min-width: 768px) { 
     .logo {
         width: 100px;
     }
-    
-    
-    .picture {
-        background: url(../public/img/timetravel.jpg);
-        width: 50%;
-        position: absolute;
-        background-size: cover;
-        left: 0px;
-        height: 100%;
+
+    .until{
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 992px) {
+    .margindesign {
+        margin: 80px 15% 0 15%;
     }
     
-    .text {
-        color: white;
-        width: 50%;
-        position: relative;
-        left: 50%;
-        height: auto;
+    #navigationLinks {
+        display: inline-flex;
     }
     
-    .center {
-        text-align: center;
-        color: white;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+    .logo {
+        width: 150px;
     }
-    
-    .space {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-  
-    .wholeBackground {
-        size: 100%;
-        font-family: 'Nunito Sans', 'Arial', sans-serif;
-        font-size: 20px;
-    }
-  
+
     .until{
         max-width: 800px;
         gap:2em;
@@ -295,5 +316,36 @@ footer {
         font-size: 2em;
         padding-bottom: 1em;
     }
-  } 
-  
+}
+    
+    /* .picture {
+        background: url(../img/timetravel.jpg);
+        width: 50%;
+        position: absolute;
+        background-size: cover;
+        left: 0px;
+        height: 100%;
+    } */
+
+
+/* .text {
+        background-color: #6A7EAD;
+        color: white;
+        width: 50%;
+        position: absolute;
+        right: 0px;
+        height: 100%;
+    }
+    
+    .center {
+        text-align: center;
+        color: white;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .space {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+} */

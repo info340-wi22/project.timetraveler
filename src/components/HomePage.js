@@ -1,43 +1,61 @@
-import React, { useState } from 'react';
-import PetList from './EventList';
-import ComposeForm from './ComposeForm';
-import { LocationList } from './LocationList';
-import Selection from './Type';
+import React, { useEffect, useState } from 'react';
+// import DisplayedBlock from './DeleteOrDisplay';
+import ComposeForm from './CreateBlock';
+import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
+import EventList from './EventList';
+
 
 function HomePage(props) {
-    const [pets, setPets] = useState(props.pets);
-    const [currentType, setCurrentType] = useState("Other");
+    const eventListRef = props.eventListRef;
+    const [events, setEvents] = useState(props.currentEventList);
 
-    const handleSelect = (img) => {
-        setCurrentType(img);
-    }
+    //useEffect update firebase data
+    useEffect(() => {
+    firebaseSet(eventListRef, {events})
+        .then(() => console.log("data saved successfully!"))
+        .catch(err => console.log(err));
+    })
 
-    const addCard = (name, img) => {
-        const newCard = {
-            "name": name,
-            "img": "/img/" + img + ".jpeg",
+    const addCard = (StartDate, StartTime, StartTimezone, StartWeekDay, EndDate, EndTime, EndTimezone, EndWeekDay, EventType, Description) => {
+        // if (events.length > 0) {
+        //     let newId = events[events.length - 1].id + 1
+        // }
+        
+        let newCard = {
+            "StartDate": StartDate, 
+            "StartTime": StartTime, 
+            "StartTimezone": StartTimezone, 
+            "StartWeekDay": StartWeekDay, 
+            "EndDate": EndDate, 
+            "EndTime": EndTime, 
+            "EndTimezone": EndTimezone,
+            "EndWeekDay": EndWeekDay, 
+            "EventType": EventType, 
+            "Description": Description,
         }
-        const newCardArray = [...pets, newCard];
-        setPets(newCardArray);
+        const newCardArray = [...events, newCard];
+        setEvents(newCardArray);
     }
-
-    return (
-        <div>
-            <div className="container">
-                <div className="row">
-                    <div id="petList" className="col-9">
-                        <PetList pets={pets} key={pets.id} />
-                    </div>
-                    
-                </div>
-                <Selection whatType={currentType} typeCallBack={handleSelect} />
-                <div>
-                    <ComposeForm howToAddCard={addCard} whatType={currentType} />
-                </div>
-                <LocationList />
+    if(events == "") {
+        return (
+            <div>
+                <ComposeForm howToAddCard={addCard}/>
             </div>
-        </div>
-    );
+        );
+    } else { 
+        return (
+            <div>
+                <div>
+                    <ComposeForm howToAddCard={addCard}/>
+                </div>
+                <div>
+                    <EventList events={events}/>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default HomePage;
+
+//howToRemoveCard={}
