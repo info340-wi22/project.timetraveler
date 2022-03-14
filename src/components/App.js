@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getDatabase, ref, onValue } from "firebase/database";
 import Countdown from './Countdown';
-import HomePage from './HomePage';
+import * as Static from './StaticPage';
 import NavBar from './NavBar';
 import AboutPage from './AboutPage';
 import SignInPage from './SignInPage';
@@ -53,12 +53,13 @@ function App() {
   if (currentUser) {
     return (
       <div>
-        <NavBar auth={getAuth()}/>
+        <NavBar auth={getAuth()} />
         <main>
           <Routes>
             <Route path="/" element={<HomePage currentEventList={currentEventList} eventListRef={eventListRef} />} />
             <Route path="countdown" element={<Countdown currentEventList={currentEventList} />} />
-            <Route path="about" element={<AboutPage />} />
+            <Route path="about" element={<Static.AboutPage />} />
+            <Route path="*" element={<Static.ErrorPage />} />
           </Routes>
 
         </main>
