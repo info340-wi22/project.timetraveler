@@ -2,116 +2,27 @@
     box-sizing: border-box;
 }
 
-.type {
-    font-size: 1.5rem;
-    letter-spacing: 5px;
-    font-family: 'Bitter', serif;
-    background-color: #FF7582;
-    color: white;
-    border-radius: 10px;
-    padding-left: 1.5rem;
-}
-
-.starttime,
-.endtime {
-    font-size: 2.5rem;
-    letter-spacing: 10px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #C56C86;
-    color: white;
-    border-radius: 10px;
-    padding-left: 1.5rem;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
-    position: center;
-    margin: 3px;
-}
-
-.endtime {
-    background-color: #355C7D;
-}
-
-input[type=time],
-input[type=date] {
-    border: none;
-}
-
-input[type="time"]::-webkit-calendar-picker-indicator {
-    display: none;
-}
-
-input[type=time]::-webkit-datetime-edit-ampm-field {
-    display: none;
-}
-
-.margindesign {
-    width: 70%;
-    margin: 80px 15% 0 15%;
-}
-
-.form-control {
-    border: none;
-}
-
-button {
-    width: 50px;
+body {
     background-color: #1A2D47;
 }
 
-button span {
-    color: pink;
-}
-
-.margindesignnumber2 {
-    margin-top: 80px;
-    margin-left: 1rem;
-    margin-right: 2rem;
-}
-
-.starttimezone,
-.startday,
-.startweekday,
-.startdate,
-.endtimezone,
-.endday,
-.endweekday,
-.enddate {
-    text-align: center;
-    letter-spacing: 1px;
-    padding-left: .8rem;
-    padding-right: .8rem;
-    font-family: 'Bitter', serif;
-    background-color: #725A7A;
-    color: white;
-    border-radius: 10px;
-    margin: .2rem;
-}
-
-
-/* ::placeholder { 
-    opacity: 1;
-  } */
-
-.endtimezone,
-.endday,
-.endweekday,
-.enddate {
+/* header */
+header {
     background-color: #355C7D;
-    ;
+    /* margin-bottom: 40px; */
+}
+
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.logo {
+    width: 50px;
 }
 
 .nav-link {
     color: #FF7582;
-}
-
-header {
-    background-color: #355C7D;
-    margin-bottom: 80px;
-}
-
-.until,
-.until__title {
-    font-family: "Baloo da 2", cursive;
 }
 
 #navigationLinks {
@@ -119,102 +30,161 @@ header {
 }
 
 .nav-item {
-    padding: 1rem;
-}
-
-.logo {
-    width: 100px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .fa-1x {
     font-size: 1.5rem;
 }
 
-
-/* .picture {
-    background-image: url(../img/timetravel.jpg);
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-} */
-
-
-/*.text {
-    background-color: #6A7EAD;
-    color: white;
-    width: 100%;
-    position: absolute;
-    height: auto;
+/* home page */
+.margindesign {
+    width: 70%;
+    margin: 40px 5% 0 5%;
+    padding: 0px;
 }
 
-.center {
-    text-align: center;
-    color: white;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
+.eventTypeMarginDesign {
+    margin: 0px;
+} 
 
-.space {
-    padding-left: 2rem;
-    padding-right: 2rem;
-} */
-
-body {
-    background-color: #1A2D47;
-}
-
-
-/*
-.location-name {
-    color: white;
+.eventType {
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    font-family: 'Bitter', serif;
     background-color: #FF7582;
-    border-radius: 10px;
-    font-family: 'Bitter', serif;
-    margin-bottom: 25px;
-}
-
-.addLocation {
     color: white;
-    background-color: #355C7D;
     border-radius: 10px;
-    font-family: 'Bitter', serif;
-    margin-bottom: 25px;
-    margin-left: 20px;
+    width: 50%;
 }
 
-.guide span {
+.timeContainer {
+    padding: 0px;
+}
+
+.starttime,
+.endtime {
+    font-size: 1.5rem;
+    letter-spacing: .6rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #C56C86;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-bottom: .4rem;
+}
+
+input[type=time],
+input[type=date],
+input[type=text],
+.form-control {
+    border: none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-datetime-edit-ampm-field,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.starttimezoneCol,
+.startweekdayCol,
+.startdateCol,
+.endtimezoneCol,
+.endweekdayCol,
+.enddateCol {
+    text-align: center;
+    letter-spacing: .2rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    font-family: 'Bitter', serif;
+    font-size: .5rem;
+    background-color: #725A7A;
+    color: white;
+    border-radius: 10px;
+    margin-right: .2rem;
+    margin-bottom: .2rem;
+    height: 24px;
+}
+
+.startweekday,
+.starttimezone, 
+.startweekday,
+.starttimezone,
+.endweekday,
+.endtimezone {
+    padding-top: .4rem;
+}
+
+.startdate,
+.enddate,
+.startweekday,
+.endweekday,
+.starttimezone,
+.endtimezone {
+    background-color: #725A7A;
+    color: white;
+    font-size: .5rem;
+    letter-spacing: .2rem;
+    padding-top: .4rem;
+    padding-left: 1.2rem;
+}
+
+.endtimezoneCol,
+.enddayCol,
+.endweekdayCol,
+.enddateCol,
+.enddate, 
+.endtime,
+.endweekday,
+.endtimezone {
+    background-color: #355C7D;
+}
+
+.width48 {
+    flex: 0 0 auto;
+    width: 47%;
+}
+
+.width90 {
+    width: 90%;
+    padding-left: 25%;
+}
+
+.input-txt {
+    font-family: 'Bitter', serif;;
+    font-size: 12px;
+    /* not working, why?? */
+    color: white;
+}
+
+textarea {
+    height: 100px;
+}
+
+.material-icons {
+    font-size: 16px;
+}
+
+button span {
     color: #FF7582;
 }
 
-.guide {
-    display: flex;
-    text-align: center;
-    padding-top: 10rem;
-    font-family: 'Bitter', serif;
-    color: #725A7A;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
+::placeholder {
+    color: white;
+  }
 
-footer {
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    padding-top: 10rem;
-    font-family: 'Bitter', serif;
-    color: #725A7A;
-    padding-left: 1rem;
-    padding-right: 1rem;
-} */
-
-
-/*countdown default
+/* countdown Page */
 .until__title {
+    font-family: "Baloo da 2", cursive;
     margin:auto;
     text-align: center;
     color:#C56C86;
 }
 .until{
+    font-family: "Baloo da 2", cursive;
     margin: auto;
     max-width: 450px;
     display: grid;
@@ -252,162 +222,101 @@ footer {
     text-align: center;
     color: #ffffff;
     font-weight: bold;
-} */
+} 
 
-
-/* Event List 
-.wholeBackground {
-    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
-    margin: 0;
-    font-size: 16px;
-} */
-
-
-/* .containerBox {
-    /*grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 0.2fr 0.4fr 0.2fr 0.4fr 0.4fr;
-    
-    grid-template-areas: 
-        "card1"
-        "card2"
-        "card3"
-        "card4"
-        "card5"
-        "card6";
-}  */
-
-
-/* img{
-    width: 75%;
-    height: 75%;
-    object-fit: cover;
-    }
-
-.card1 {
-    grid-area: card1;
+/* .picture {
+    background-image: url(../img/timetravel.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 
-.card2 {
-    grid-area: card2;
-}
-
-.card3 {
-    grid-area: card3;
-}
-
-.card4 {
-    grid-area: card4;
-}
-
-.card5 {
-    grid-area: card5;
-}
-
-.card6 {
-    grid-area: card6;
-}
-
-.card-text {
-    display: none;
-}
-
-.containerFooter {
+.text {
+    background-color: #6A7EAD;
     color: white;
+    width: 100%;
+    position: absolute;
+    height: auto;
+}
+
+.center {
+    text-align: center;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.space {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.guide span {
+    color: #FF7582;
+}
+
+.guide {
+    display: flex;
+    text-align: center;
+    padding-top: 10rem;
+    font-family: 'Bitter', serif;
+    color: #725A7A;
+    padding-left: 1rem;
+    padding-right: 1rem;
 } */
 
+footer {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    padding-top: 10rem;
+    font-family: 'Bitter', serif;
+    color: #725A7A;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
-/* Media Query 
-@media (min-width: 768px) {
-    nav {
-        background-color:#355C7D; 
-    }
-    
-    .time1 {
-        font-size: 3rem;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-    
-    .time2 {
-        font-size: 3rem;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
 
-    .nav-item {
-        padding: 1rem;
-    }
-    
-    .nav-link {
-        color: white;
-    }
-    
+/* Media Query  */
+@media (min-width: 768px) { 
     .logo {
-        width: 150px;
-        margin-left: 3rem;
-    }
-
-    .wholeBackground {
-        font-family: 'Nunito Sans', 'Arial', sans-serif;
-        font-size: 18px;
-    }
-
-    .card-text {
-        display: inline;
+        width: 100px;
     }
 
     .until{
         max-width: 700px;
     }
-
-    .containerBox {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 0.6fr 0.6fr 0.8fr 0.8fr;
-        grid-template-areas: 
-        "card1 card1 card2 card2"
-        "card5 card3 card3 card3"
-        "card5 card6 card6 card4"
-        "card5 card6 card6 card4";
-        gap: 10px;
-    }
 }
 
-
 @media (min-width: 992px) {
+    .margindesign {
+        margin: 80px 15% 0 15%;
+    }
     
     #navigationLinks {
-        margin-left: auto;
         display: inline-flex;
-    }
-
-    .time1 {
-        font-size: 2rem;
-        padding-left: 1px;
-        padding-right: 1px;
-    }
-    
-    .time2 {
-        font-size: 2rem;
-        padding-left: 1px;
-        padding-right: 1px;
-    }
-
-    nav {
-        background-color: #355C7D;
-    }
-    
-    .nav-item {
-        padding: 1rem;
-    }
-    
-    .nav-link {
-        color: #FF7582;
     }
     
     .logo {
-        width: 200px;
+        width: 150px;
     }
+
+    .until{
+        max-width: 800px;
+        gap:2em;
+        padding:2em;
+    }
+    
+    .until__numeric {
+        font-size:5em;
+        font-weight: bold;
+    }
+    
+    .until__unit {
+        font-size: 2em;
+        padding-bottom: 1em;
+    }
+}
     
     /* .picture {
         background: url(../img/timetravel.jpg);
@@ -438,27 +347,5 @@ footer {
     .space {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-
-    .wholeBackground {
-        size: 100%;
-        font-family: 'Nunito Sans', 'Arial', sans-serif;
-        font-size: 20px;
-    }
-
-    .until{
-        max-width: 800px;
-        gap:2em;
-        padding:2em;
-    }
-    
-    .until__numeric {
-        font-size:5em;
-        font-weight: bold;
-    }
-    
-    .until__unit {
-        font-size: 2em;
-        padding-bottom: 1em;
     }
 } */

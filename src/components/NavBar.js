@@ -1,8 +1,17 @@
 import React from 'react';
 import { Nav, Navbar } from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import { Button } from "react-bootstrap";
+import { signOut } from "firebase/auth";
 
-export default function NavBar() {
+export default function NavBar(props) {
+    let auth = props.auth;
+    const handleClick = (event) => {
+        event.preventDefault();
+        signOut(auth)
+            .then(() => { })
+            .catch((error) => { });
+    };
     return (
         <header>
             <div className="container-fluid">
@@ -21,7 +30,9 @@ export default function NavBar() {
                                 <li className="nav-item">
                                     <Link to="/about" className="nav-link">About</Link>
                                 </li>
-
+                                <li activeClassName="linkElement">
+                                    <Button className="signout" onClick={handleClick} aria-label="sign out">Sign Out</Button>
+                                </li>
                             </ul>
                         </Nav>
                     </Navbar.Collapse>

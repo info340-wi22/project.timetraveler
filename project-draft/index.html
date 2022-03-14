@@ -25,7 +25,7 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <img class="logo" src="" alt="logo">
+                <img class="logo" src="img/time-traveler-logo 1.png" alt="logo">
                 <div class="menu">
                     <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
@@ -40,10 +40,10 @@
                             <a class="nav-link" href="countDownMock.html">Countdown</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="EventList.html">Event List</a>
+                            <a class="nav-link" href="About.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="About.html">About</a>
+                            <a class="nav-link" href="">Sign In</a>
                         </li>
                     </ul>
                 </div>
@@ -53,38 +53,33 @@
 
     <main>
         <div class="container margindesign">
-            <div class="row col-4 margindesignnumber2"> 
-                <div>
-                    <p class="type">Try to do</p>
-                </div>
+            <div class="row col-12 eventTypeMarginDesign"> 
+                <p class="eventType">Try to do</p>
             </div>
 
             <div class="row">
                 <div class="container">
                     <div class="d-flex">
-                        <div class="col-6">
-                            <div class="container">
+                        <div class="col-lg-6">
+                            <div class="container timeContainer">
                                 <div class="row">
                                     <div class="d-flex">
-                                        <div class="col-7">
-                                            <input class="starttime" type="time" value="07:52">
+                                        <div class="col-6">
+                                            <input class="starttime" type="time" value="08:00">
                                         </div>
-                                        <div class="col-5">
+                                        <div class="col-6">
                                             <div class="container">
                                                 <div class="row">
-                                                    <div class="col startday">
-                                                        <p>AM</p>
-                                                    </div>
-                                                    <div class="col starttimezone">
-                                                        <p>PST</p>
+                                                    <div class="col startdateCol">
+                                                        <input type="date" class="startdate" value="2022-02-01"></input>
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col startweekday">
-                                                        <p>TUE</p>
+                                                    <div class="col width48 startweekdayCol">
+                                                        <input type="text" class="width90 startweekday" placeholder="TUE">
                                                     </div>
-                                                    <div class="col startdate">
-                                                        <p>Date</p>
+                                                    <div class="col width48 starttimezoneCol">
+                                                        <input type="text" class="width90 starttimezone" placeholder="PST">
                                                     </div>
                                                 </div>
                                             </div>
@@ -94,25 +89,22 @@
 
                                 <div class="row">
                                     <div class="d-flex">
-                                        <div class="col-7">
-                                            <input class="endtime" type="time" value="09:52">
+                                        <div class="col-6">
+                                            <input class="endtime" type="time" value="09:00">
                                         </div>
-                                        <div class="col-5">
+                                        <div class="col-6">
                                             <div class="container">
                                                 <div class="row">
-                                                    <div class="col endday">
-                                                        <p>AM</p>
-                                                    </div>
-                                                    <div class="col endtimezone">
-                                                        <p>PST</p>
+                                                    <div class="col enddateCol">
+                                                        <input type="date" class="enddate" value="2022-02-01"></input>
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col endweekday">
-                                                        <p>TUE</p>
+                                                    <div class="col width48 endweekdayCol">
+                                                        <input type="text" class="width90 endweekday" placeholder="TUE">
                                                     </div>
-                                                    <div class="col enddate">
-                                                        <input type="date" class="enddate" value="2022-02-01"></input>
+                                                    <div class="col width48 endtimezoneCol">
+                                                        <input type="text" class="width90 endtimezone" placeholder="PST">
                                                     </div>
                                                 </div>
                                             </div>
@@ -122,12 +114,12 @@
                             </div>
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-lg-6">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-11">
                                         <form>
-                                            <textarea class="form-control" rows="7" placeholder="Type a new event information" style="background-color:#355C7D;"></textarea>
+                                            <textarea class="form-control input-txt" rows="7" placeholder="Have breakfast with friends&#10;Location: Bacco Cafe" style="background-color:#355C7D;"></textarea>
                                         </form>
                                     </div>
                                     <div class="col-1 d-flex flex-column-reverse">
@@ -146,33 +138,3 @@
 </body>
 
 </html>
-
-            <!-- <div class="allLocation"> -->
-                <!-- <div class="row"> -->
-                    <!-- Location 1 -->
-                    <!-- <div class="col-lg-6 col-md-12 d-flex py-4">
-                        <div class="location container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h1 class="location-name px-1" style="max-width: 140px;">
-                                        Seattle</h1>
-                                </div>
-                                <div class="col-md-12 col-lg-8">
-                                    <input class="time1" type="time" value="07:52">
-                                </div>
-                                <div class="col-md-2 col-lg-4">
-                                    <input type="date" class="date1" value="2022-02-01">
-                                    <p class="TUE1 mt-2">TUE</p>
-                                </div>
-                                <div class="col-md-12 col-lg-8">
-                                    <input class="time2" type="time" value="07:52">
-                                </div>
-                                <div class="col-md-2 col-lg-4">
-                                    <input type="date" class="date2" value="2022-02-01">
-                                    <p class="TUE2 mt-2">TUE</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                <!-- </div> -->
-           <!-- </div> -->
