@@ -3,7 +3,6 @@
 import ComposeForm from './CreateBlock';
 import { getDatabase, ref, /* set as firebaseSet */ push as firebasePush} from 'firebase/database';
 import EventList from './EventList';
-import { useReducer } from 'react';
 // import { FilterSection } from './FilterSection';
 
 
@@ -44,7 +43,8 @@ function HomePage(props) {
         // const newCardArray = [...events, newCard];
         // setEvents(newCardArray);
     }
-
+    
+    console.log(props.currentEventList);
     if (props.eventListRef  == "") {
         return (
             <div>

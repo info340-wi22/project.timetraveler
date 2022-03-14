@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getDatabase, ref, onValue } from "firebase/database";
-import Countdown from './Countdown';
+// import Countdown from './Countdown';
 import * as Static from './StaticPage';
 import NavBar from './NavBar';
 import HomePage from './HomePage';
@@ -59,7 +59,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage currentEventList={currentEventList} currentUser={currentUser}/>} />
-            <Route path="countdown" element={<Countdown currentEventList={currentEventList} />} />
+            {/* <Route path="countdown" element={<Countdown currentEventList={currentEventList} />} /> */}
             <Route path="about" element={<Static.AboutPage />} />
             <Route path="*" element={<Static.ErrorPage />} />
           </Routes>
