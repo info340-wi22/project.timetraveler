@@ -23,17 +23,14 @@ export default function Countdown(props) {
         let futureTime = convertToMiSeconds(eventslist[i]);
         eventslist[i].timeInMiSecond = futureTime;
     }
-    console.log(eventslist);
 
     let today = Date.now();
     const result = eventslist.filter(eventslist => eventslist.timeInMiSecond > today);
-    console.log(result);
 
     //compare each object based on the miliseconds variable to get the most close event
     const closeTimeData = result.reduce(function (prev, curr) { //get single object
         return prev.timeInMiSecond < curr.timeInMiSecond ? prev : curr;
     });
-    console.log(closeTimeData);
    
   
 

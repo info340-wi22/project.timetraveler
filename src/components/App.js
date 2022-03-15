@@ -18,7 +18,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(undefined);
   
   useEffect(() => {
-    if(currentUser === undefined) {
+    if(currentUser == undefined) {
       return;
     }
     const eventListRef = ref(db, "eventList/" + currentUser.uid);

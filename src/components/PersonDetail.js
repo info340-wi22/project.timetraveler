@@ -8,7 +8,6 @@ export default function PersonDetails(props) {
 
     // find the person in data
     let thePerson =  _.find(props.personData, {Name: personName});
-    console.log(thePerson);
 
     return (
         <div className="card">
