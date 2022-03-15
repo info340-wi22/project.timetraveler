@@ -64,7 +64,7 @@ function App() {
         <main>
           <Routes>
           <Route path="/" element={<HomePage currentEventList={currentEventList} setCurrentEventList={setCurrentEventList} currentUser={currentUser}/>} />
-            <Route path="countdown" element={<Countdown currentEventList={currentEventList} />} />
+            <Route path="countdown" element={<Countdown />} />
             <Route path="about" element={<Static.AboutPage personData={PERSONDATA}/>} />
             <Route path="/about/:name" element={<PersonDetails personData={PERSONDATA}/>} />
             <Route path="*" element={<Static.ErrorPage />} />

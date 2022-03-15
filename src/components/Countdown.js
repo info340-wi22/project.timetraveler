@@ -1,16 +1,8 @@
 import { React, useState, useEffect } from 'react';
 import CountdownTimer from './CountdownTimer';
+import eventslist from '../data/eventslist.json';
 
-export default function Countdown(props) {
-    let eventslist = props.currentEventList;
-    // console.log(eventlist);
-    // const [eventslist, seteventslist] = useState([]);
-    // console.log(eventslist);
-    
-    // useEffect(() => {
-    //     seteventslist(eventlist);
-    // }, [eventlist]); //Add props.currentEventList
-    // console.log(eventslist);
+export default function Countdown() {
     
     //get the timestamp from now to the future datetime
     function convertToMiSeconds(eventslist) { 

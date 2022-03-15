@@ -1,0 +1,50 @@
+[
+  {
+      "StartDate": "04/05/2022",
+      "StartTime": "07:52",
+      "StartTimezone": "PST",
+      "StartWeekDay": "TUE",
+      "EndDate": "03/06/2022",
+      "EndTime": "07:52",
+      "EndTimezone": "PST",
+      "EndWeekDay": "TUE",
+      "EventType": "Try to do",
+      "Description": "do/have ____ at ____ (e.g., Bacco Cafe)"
+  },
+  {
+    "StartDate": "04/05/2022",
+    "StartTime": "07:52",
+    "StartTimezone": "PST",
+    "StartWeekDay": "TUE",
+    "EndDate": "04/06/2022",
+    "EndTime": "07:52",
+    "EndTimezone": "PST",
+    "EndWeekDay": "TUE",
+    "EventType": "Try to do",
+    "Description": "do/have ____ at ____ (e.g., Bacco Cafe)"
+  },  
+  {
+    "StartDate": "04/05/2022",
+    "StartTime": "07:52",
+    "StartTimezone": "PST",
+    "StartWeekDay": "TUE",
+    "EndDate": "04/06/2022",
+    "EndTime": "07:52",
+    "EndTimezone": "PST",
+    "EndWeekDay": "TUE",
+    "EventType": "Try to do",
+    "Description": "do/have ____ at ____ (e.g., Bacco Cafe)"
+  },  
+  {
+      "StartDate": "04/05/2022",
+      "StartTime": "07:52",
+      "StartTimezone": "PST",
+      "StartWeekDay": "TUE",
+      "EndDate": "04/06/2023",
+      "EndTime": "07:00",
+      "EndTimezone": "PST",
+      "EndWeekDay": "TUE",
+      "EventType": "Try to do",
+      "Description": "do/have ____ at ____ (e.g., Bacco Cafe)"
+  }
+]
