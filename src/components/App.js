@@ -7,6 +7,8 @@ import NavBar from './NavBar';
 import HomePage from './HomePage';
 import SignInPage from './SignInPage';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import PersonDetails from './PersonDetail';
+import PERSONDATA from '../data/personData.json';
 
 function App() {
   const db = getDatabase();
@@ -60,7 +62,8 @@ function App() {
           <Routes>
           <Route path="/" element={<HomePage currentEventList={currentEventList} setCurrentEventList={setCurrentEventList} currentUser={currentUser}/>} />
             <Route path="countdown" element={<Countdown currentEventList={currentEventList} />} />
-            <Route path="about" element={<Static.AboutPage />} />
+            <Route path="about" element={<Static.AboutPage personData={PERSONDATA}/>} />
+            <Route path="/about/:name" element={<PersonDetails personData={PERSONDATA}/>} />
             <Route path="*" element={<Static.ErrorPage />} />
           </Routes>
 

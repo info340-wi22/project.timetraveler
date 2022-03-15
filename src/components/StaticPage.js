@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export function AboutPage() {
+export function AboutPage(props) {
+    const personData = props.personData;
     return (
         <div className="margindesign">
             <main>
@@ -36,8 +38,8 @@ export function AboutPage() {
                                     <div className="col-sm-auto col-xl-12">
                                         <img className="card-img-top" src="img/person1.jpg" alt="Yujia Info" />
                                         <div className="card-body">
-                                            <h3 className="card-title">Yujia Si</h3>
-                                            <p className="card-text">hobby:</p>
+                                            <Link to={'/about/'+personData[0].Name} className="card-title">{personData[0].Name}</Link>
+                                            <p className="card-text">Hobby: design, video</p>
                                         </div>
                                     </div>
                                 </div>
@@ -49,8 +51,8 @@ export function AboutPage() {
                                     <div className="col-sm-auto col-xl-12">
                                         <img className="card-img-top" src="img/person2.jpg" alt="Hongjie Info" />
                                         <div className="card-body">
-                                            <h3 className="card-title">Hongjie Wang</h3>
-                                            <p className="card-text">hobby: Music, gaming</p>
+                                            <Link to={'/about/'+personData[1].Name} className="card-title">{personData[1].Name}</Link>
+                                            <p className="card-text">Hobby: Music, video game</p>
                                         </div>
                                     </div>
                                 </div>
@@ -62,8 +64,8 @@ export function AboutPage() {
                                     <div className="col-sm-auto col-xl-12">
                                         <img className="card-img-top" src="img/person3.jpg" alt="Yue Yuan Info" />
                                         <div className="card-body">
-                                            <h3 className="card-title">Yue Yuan</h3>
-                                            <p className="card-text">hobby: Movies, travel</p>
+                                            <Link to={'/about/'+personData[2].Name} className="card-title">{personData[2].Name}</Link>
+                                            <p className="card-text">Hobby: Movies, travel</p>
                                         </div>
                                     </div>
                                 </div>
@@ -75,8 +77,8 @@ export function AboutPage() {
                                     <div className="col-sm-auto col-xl-12">
                                         <img className="card-img-top" src="img/person4.jpg" alt="Xiaobing Info" />
                                         <div className="card-body">
-                                            <h3 className="card-title">Xiaobing Xu</h3>
-                                            <p className="card-text">hobby:</p>
+                                            <Link to={'/about/'+personData[3].Name} className="card-title">{personData[3].Name}</Link>
+                                            <p className="card-text">Hobby:</p>
                                         </div>
                                     </div>
                                 </div>

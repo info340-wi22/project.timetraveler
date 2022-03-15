@@ -1,4 +1,0 @@
-[
-  {"StartDate":"02/01/2022", "StartTime":"07:52", "StartTimezone":"PST", "StartWeekDay":"TUE", "EndDate":"02/01/2022", "EndTime":"07:52", "EndTimezone":"PST", "EndWeekDay":"TUE", "EventType":"Try to do", "Description":"do/have ____ at ____ (e.g., Bacco Cafe)"},
-  {"StartDate":"03/01/2022", "StartTime":"08:52", "StartTimezone":"EST", "StartWeekDay":"MON", "EndDate":"03/01/2022", "EndTime":"11:52", "EndTimezone":"CST", "EndWeekDay":"THU", "EventType":"Must Do", "Description":"do things"}
-]

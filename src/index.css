@@ -170,15 +170,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
 /* countdown Page */
-.countdown__title {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+.until__title {
     font-family: "Baloo da 2", cursive;
     margin:auto;
     text-align: center;
     color:#C56C86;
 }
-.countdown{
+.until{
     font-family: "Baloo da 2", cursive;
     margin: auto;
     max-width: 450px;
@@ -192,27 +190,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-family: sans-serif;
 }
 
-.countdown__component{
+.until__component{
     text-align: center;
     background: #ffffff;
     border-radius: 5px;
 }
 
-.countdown__numeric {
+.until__numeric {
     color:#333333;
     padding:.5em 0;
     font-size:2em;
     font-weight: bold;
 }
 
-.countdown__unit {
+.until__unit {
     font-size: 1em;
     padding-bottom: 1em;
     font-weight: bold;
     color: #C56C86;
 }
 
-.countdown__event {
+.until__event {
     grid-column: span 4;
     text-align: center;
     color: #ffffff;
@@ -258,7 +256,7 @@ footer {
         width: 15rem;
     }
 
-    .countdown{
+    .until{
         max-width: 700px;
     }
 }
@@ -300,18 +298,18 @@ footer {
         width: 100px;
     }
 
-    .countdown{
+    .until{
         max-width: 800px;
         gap:2em;
         padding:2em;
     }
     
-    .countdown__numeric {
+    .until__numeric {
         font-size:5em;
         font-weight: bold;
     }
     
-    .countdown__unit {
+    .until__unit {
         font-size: 2em;
         padding-bottom: 1em;
     }
