@@ -3,12 +3,13 @@ import CountdownTimer from './CountdownTimer';
 
 export default function Countdown(props) {
     let eventslist = props.currentEventList;
+    // console.log(eventlist);
     // const [eventslist, seteventslist] = useState([]);
-
+    // console.log(eventslist);
+    
     // useEffect(() => {
-    //     seteventslist(props.currentEventList);
-    // }, [props.currentEventList]); //Add props.currentEventList
-
+    //     seteventslist(eventlist);
+    // }, [eventlist]); //Add props.currentEventList
     // console.log(eventslist);
     
     //get the timestamp from now to the future datetime
@@ -26,7 +27,7 @@ export default function Countdown(props) {
 
     let today = Date.now();
     const result = eventslist.filter(eventslist => eventslist.timeInMiSecond > today);
-
+    console.log(result);
 
     //compare each object based on the miliseconds variable to get the most close event
     const closeTimeData = result.reduce(function (prev, curr) { //get single object
