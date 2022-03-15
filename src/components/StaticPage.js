@@ -2,9 +2,9 @@ import React from 'react';
 
 export function AboutPage() {
     return (
-        <div>
+        <div className="margindesign">
             <main>
-                <div className="text">
+                <div className="aboutText">
                     <section className="space">
                         <h1 className="center">About Us</h1>
                         <p>
@@ -27,7 +27,7 @@ export function AboutPage() {
                     </section>
                 </div>
 
-                <div className="text">
+                <div className="aboutUs">
                     <h1 className="center">Who We Are</h1>
                     <div className="container">
                         <div className="row">

@@ -83,66 +83,65 @@ export default function ComposeForm(props) {
 
     return (
         <div className="container margindesign">
-            <div className="row col-12 MarginDesign">
-                <Dropdown className="eventType">
-                    <Dropdown.Toggle>
-                        {currentType}
-                    </Dropdown.Toggle>
+        <div className="row col-12 MarginDesign">
+            <Dropdown className="eventType">
+                <Dropdown.Toggle>
+                    {currentType}
+                </Dropdown.Toggle>
 
-                    <Dropdown.Menu>
-                        {userButtons}
-                    </Dropdown.Menu>
-                </Dropdown>
-            </div>
+                <Dropdown.Menu>
+                    {userButtons}
+                </Dropdown.Menu>
+            </Dropdown>
+        </div>
 
-            <div className="row">
-                <div className="container">
-                    <div className="d-flex flex-wrap">
-                        <div className="col-lg-6">
-                            <div className="container timeContainer">
-                                <div className="row">
-                                    <div className="d-flex">
-                                        <div className="col-6">
-                                            <input className="starttime" type="time" onChange={handelStartTime} value={userTimeStartInput} />
-                                        </div>
-                                        <div className="col-6">
-                                            <div className="container">
-                                                <div className="row">
-                                                    <div className="col startdateCol">
-                                                        <input type="date" className="startdate" onChange={handelStartDate} value={userStartDateInput} />
-                                                    </div>
+        <div className="row">
+            <div className="container">
+                <div className="d-flex flex-wrap">
+                    <div className="col-lg-6">
+                        <div className="container timeContainer">
+                            <div className="row">
+                                <div className="d-flex">
+                                    <div className="col-6">
+                                        <input className="starttime" type="time" onChange={handelStartTime} value={userTimeStartInput} />
+                                    </div>
+                                    <div className="col-6">
+                                        <div className="container">
+                                            <div className="row">
+                                                <div className="col startdate">
+                                                    <input type="date" className="startdate" onChange={handelStartDate} value={userStartDateInput} />
                                                 </div>
-                                                <div className="row">
-                                                    <div className="col width48 startweekdayCol">
-                                                        <input type="text" className="width90 startweekday" onChange={handelStartWeekDay} value={userStartWeekDayInput} />
-                                                    </div>
-                                                    <div className="col width48 starttimezoneCol">
-                                                        <input className="width90 starttimezone" type="text" onChange={handelStartTimezone} value={userTimeZoneStartInput} />
-                                                    </div>
+                                            </div>
+                                            <div className="row">
+                                                <div className="col startweekday">
+                                                    <input type="text" className="width90 startweekday" onChange={handelStartWeekDay} value={userStartWeekDayInput} />
+                                                </div>
+                                                <div className="col starttimezone">
+                                                    <input className="width90 starttimezone" type="text" onChange={handelStartTimezone} value={userTimeZoneStartInput} />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="row">
-                                    <div className="d-flex">
-                                        <div className="col-6">
-                                            <input className="endtime" type="time" onChange={handelEndTime} value={userTimeEndInput} />
-                                        </div>
-                                        <div className="col-6">
-                                            <div className="container">
-                                                <div className="row">
-                                                    <div className="col enddateCol">
-                                                        <input type="date" className="enddate" onChange={handelEndDate} value={userEndDateInput} />
-                                                    </div>
+                            </div>
+                            <div className="row">
+                                <div className="d-flex">
+                                    <div className="col-6">
+                                        <input className="endtime" type="time" onChange={handelEndTime} value={userTimeEndInput} />
+                                    </div>
+                                    <div className="col-6">
+                                        <div className="container">
+                                            <div className="row">
+                                                <div className="col enddate">
+                                                    <input type="date" className="enddate" onChange={handelEndDate} value={userEndDateInput} />
                                                 </div>
-                                                <div className="row">
-                                                    <div className="col width48 endweekdayCol">
-                                                        <input type="text" className="width90 endweekday" onChange={handelEndWeekDay} value={userEndWeekDayInput} />
-                                                    </div>
-                                                    <div className="col width48 endtimezoneCol">
-                                                        <input className="width90 endtimezone" type="text" onChange={handelEndTimezone} value={userTimeZoneEndInput} />
-                                                    </div>
+                                            </div>
+                                            <div className="row">
+                                                <div className="col endweekday">
+                                                    <input type="text" className="width90 endweekday" onChange={handelEndWeekDay} value={userEndWeekDayInput} />
+                                                </div>
+                                                <div className="col endtimezone">
+                                                    <input className="width90 endtimezone" type="text" onChange={handelEndTimezone} value={userTimeZoneEndInput} />
                                                 </div>
                                             </div>
                                         </div>
@@ -150,23 +149,22 @@ export default function ComposeForm(props) {
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div className="col-lg-6">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-11">
-                                        <form>
-                                            <textarea className="form-control input-txt" rows="7" placeholder="Have breakfast with friends Location: Bacco Cafe"
-                                
-                                                onChange={handleChange}
-                                                value={userDescriptionInput}></textarea>
-                                        </form>
-                                    </div>
-                                    <div className="col-1 d-flex flex-column-reverse">
-                                        <button className="btn" type="button" onClick={handleClick}>
-                                            <AddCircle />
-                                        </button>
-                                    </div>
+                    <div className="col-lg-6">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-11">
+                                    <form>
+                                        <textarea className="form-control input-txt" rows="7" placeholder="Have breakfast with friends Location: Bacco Cafe"
+                                            onChange={handleChange}
+                                            value={userDescriptionInput}></textarea>
+                                    </form>
+                                </div>
+                                <div className="col-1 d-flex flex-column-reverse">
+                                    <button className="btn" type="button" onClick={handleClick}>
+                                        <AddCircle />
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -174,9 +172,7 @@ export default function ComposeForm(props) {
                 </div>
             </div>
         </div>
+    </div>
     );
 }
-
-  // style={{background-color:#355C7D}}
-
 

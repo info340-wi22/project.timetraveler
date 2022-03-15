@@ -42,41 +42,12 @@ header {
 /* home page */
 .margindesign {
     width: 70%;
-    margin: 40px 5% 0 5%;
+    margin: 40px 15% 0 15%;
     padding: 0px;
 }
 
-.eventTypeMarginDesign {
-    margin: 0px;
-} 
-
-.eventType {
-    font-size: 1rem;
-    letter-spacing: .2rem;
-    font-family: 'Bitter', serif;
-    background-color: #FF7582;
-    color: white;
-    border-radius: 10px;
-    width: 50%;
-}
-
-.timeContainer {
-    padding: 0px;
-}
-
-.starttime,
-.endtime {
-    font-size: 1.5rem;
-    letter-spacing: .6rem;
-    font-family: 'Roboto', sans-serif;
-    background-color: #C56C86;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
-    padding: 0.5rem 0;
-    margin-bottom: .4rem;
-}
-
+/* createBlock */
+/* delete carry-on format */
 input[type=time],
 input[type=date],
 input[type=text],
@@ -90,33 +61,54 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
 }
 
-.starttimezoneCol,
-.startweekdayCol,
-.startdateCol,
-.endtimezoneCol,
-.endweekdayCol,
-.enddateCol {
-    text-align: center;
-    letter-spacing: .2rem;
-    padding-left: .8rem;
-    padding-right: .8rem;
-    font-family: 'Bitter', serif;
-    font-size: .5rem;
-    background-color: #725A7A;
-    color: white;
-    border-radius: 10px;
-    margin-right: .2rem;
-    margin-bottom: .2rem;
-    height: 24px;
+.btn-primary {
+    background-color: transparent;
+    border-color: transparent;
 }
 
-.startweekday,
-.starttimezone, 
-.startweekday,
-.starttimezone,
-.endweekday,
-.endtimezone {
-    padding-top: .4rem;
+.btn {
+    padding: 0px;
+}
+
+.container {
+    padding: 0px;
+}
+/* finish deleting carry-on format */
+.filter-container {
+    background-color: #274966;
+    display: flex;
+    justify-content: center;
+}
+.filter-btn {
+    color: white;
+    padding: 1rem;
+    text-decoration: underline;
+}
+
+.eventType {
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    font-family: 'Bitter', serif;
+    background-color: #FF7582;
+    color: white;
+    border-radius: 10px;
+    width: 45%;
+    margin-bottom: 0.4rem;
+}
+
+.starttime,
+.endtime {
+    font-size: 1.5rem;
+    letter-spacing: .6rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #C56C86;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-bottom: .4rem;
+    width: 8rem;
+    padding-left: 0.8rem;
 }
 
 .startdate,
@@ -129,14 +121,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: white;
     font-size: .5rem;
     letter-spacing: .2rem;
-    padding-top: .4rem;
-    padding-left: 1.2rem;
+    text-align: center;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    font-family: 'Bitter', serif;
+    border-radius: 10px;
+    margin-right: .2rem;
+    margin-bottom: .2rem;
+    height: 24px;
 }
 
-.endtimezoneCol,
-.enddayCol,
-.endweekdayCol,
-.enddateCol,
 .enddate, 
 .endtime,
 .endweekday,
@@ -144,14 +138,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: #355C7D;
 }
 
-.width48 {
-    flex: 0 0 auto;
-    width: 47%;
-}
-
 .width90 {
     width: 90%;
     padding-left: 25%;
+}
+
+.eventMargin {
+    margin-left: 1rem;
 }
 
 .input-txt {
@@ -160,23 +153,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: #355c7d;
     border-radius: 10px;
     color: white;
-}
-
-/* select#xyz {
-    border:0px;
-    outline:0px;
- } */
-
-textarea {
-    height: 100px;
-    width: auto;
+    height: 80px;
+    width: 18rem;
 }
 
 .material-icons {
     font-size: 16px;
 }
 
-button span {
+.MuiSvgIcon-root {
     color: #FF7582;
 }
 
@@ -185,9 +170,7 @@ button span {
   }
 
 /* countdown Page */
-.close_event_info,
 .until__title {
-    padding-top: 2rem;
     font-family: "Baloo da 2", cursive;
     margin:auto;
     text-align: center;
@@ -234,46 +217,18 @@ button span {
     font-weight: bold;
 } 
 
-/* .picture {
-    background-image: url(../img/timetravel.jpg);
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+/* about page */
+.aboutText {
+    color: white;
 }
 
-.text {
+.aboutUs {
     background-color: #6A7EAD;
     color: white;
     width: 100%;
-    position: absolute;
     height: auto;
-}
 
-.center {
-    text-align: center;
-    color: white;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 }
-
-.space {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.guide span {
-    color: #FF7582;
-}
-
-.guide {
-    display: flex;
-    text-align: center;
-    padding-top: 10rem;
-    font-family: 'Bitter', serif;
-    color: #725A7A;
-    padding-left: 1rem;
-    padding-right: 1rem;
-} */
 
 footer {
     display: flex;
@@ -286,12 +241,19 @@ footer {
     padding-right: 1rem;
 }
 
-
 /* Media Query  */
-@media (min-width: 768px) { 
+@media (min-width: 700px) { 
     .logo {
         width: 75px;
         height: 75px;
+    }
+
+    .filter-btn {
+        padding: 1rem 3rem 1rem 3rem;
+    }
+    
+    .input-txt {
+        width: 15rem;
     }
 
     .until{
@@ -299,9 +261,32 @@ footer {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 890px) {
     .margindesign {
         margin: 80px 15% 0 15%;
+    }
+
+    .filter-btn {
+        padding: 1rem 4rem 1rem 4rem;
+    }
+
+    .eventMargin {
+        margin-left: 1rem;
+    }
+
+    .input-txt {
+        height: 108px;
+        margin-left: 5rem;
+    }
+
+    .startdate,
+    .enddate,
+    .startweekday,
+    .endweekday,
+    .starttimezone,
+    .endtimezone {
+        padding-left: .1rem;
+        padding-right: .1rem;
     }
     
     #navigationLinks {
@@ -329,35 +314,3 @@ footer {
         padding-bottom: 1em;
     }
 }
-    
-    /* .picture {
-        background: url(../img/timetravel.jpg);
-        width: 50%;
-        position: absolute;
-        background-size: cover;
-        left: 0px;
-        height: 100%;
-    } */
-
-
-/* .text {
-        background-color: #6A7EAD;
-        color: white;
-        width: 50%;
-        position: absolute;
-        right: 0px;
-        height: 100%;
-    }
-    
-    .center {
-        text-align: center;
-        color: white;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-    
-    .space {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-} */

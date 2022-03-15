@@ -23,9 +23,9 @@ function Event(props) {
 
             <div className="row">
                 <div className="container">
-                    <div className="d-flex flex-wrap">
+                    <div className="d-flex flex-wrap justify-content-between">
                         <div className="col-lg-6">
-                            <div className="container timeContainer">
+                            <div className="container">
                                 <div className="row">
                                     <div className="d-flex">
                                         <div className="col-6 starttime">
@@ -34,15 +34,15 @@ function Event(props) {
                                         <div className="col-6">
                                             <div className="container">
                                                 <div className="row">
-                                                    <div className="col startdateCol">
+                                                    <div className="col startdate eventMargin">
                                                         <div>{event.StartDate}</div> 
                                                     </div>
                                                 </div>
                                                 <div className="row">
-                                                    <div className="col width47 startweekdayCol">
+                                                    <div className="col startweekday eventMargin">
                                                         <div>{event.StartWeekDay}</div> 
                                                     </div>
-                                                    <div className="col width47 starttimezoneCol">
+                                                    <div className="col starttimezone">
                                                         <div>{event.StartTimezone}</div> 
                                                     </div>
                                                 </div>
@@ -59,15 +59,15 @@ function Event(props) {
                                         <div className="col-6">
                                             <div className="container">
                                                 <div className="row">
-                                                    <div className="col enddateCol">
+                                                    <div className="col enddate eventMargin">
                                                         <div>{event.EndDate}</div> 
                                                     </div>
                                                 </div>
                                                 <div className="row">
-                                                    <div className="col width47 endweekdayCol">
+                                                    <div className="col endweekday eventMargin">
                                                         <div>{event.EndWeekDay}</div> 
                                                     </div>
-                                                    <div className="col width47 endtimezoneCol">
+                                                    <div className="col endtimezone">
                                                         <div>{event.EndTimezone}</div> 
                                                     </div>
                                                 </div>
@@ -78,13 +78,14 @@ function Event(props) {
                             </div>
                         </div>
 
-                        <div className="col-lg-6 input-txt">
+                        <div className="col-lg-6 input-txt static-txt">
                             <div>{event.Description}</div> 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     );
 }
 
