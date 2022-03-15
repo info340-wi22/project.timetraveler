@@ -23,7 +23,7 @@ function HomePage(props) {
     }
     useEffect(() => {
         setCardsCopy(props.currentEventList);
-    }, []);
+    }, [props.currentEventList]); //Add props.currentEventList
 
 
     const addCard = (StartDate, StartTime, StartTimezone, StartWeekDay, EndDate, EndTime, EndTimezone, EndWeekDay, EventType, Description) => {
@@ -40,7 +40,10 @@ function HomePage(props) {
             "Description": Description,
         }
         const eventListRef = ref(db, "eventList/" + props.currentUser.uid);
+        //add filter to check if there is a same descri already in the database
+        //show error message 
         firebasePush(eventListRef, newCard)
+            .then(() => props.setCurrentEventList([...props.currentEventList, newCard]))
             .then(() => console.log("pushed!"))
             .catch((err) => console.log(err));
     }

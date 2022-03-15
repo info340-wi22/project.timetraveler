@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getDatabase, ref, onValue } from "firebase/database";
-// import Countdown from './Countdown';
+import Countdown from './Countdown';
 import * as Static from './StaticPage';
 import NavBar from './NavBar';
 import HomePage from './HomePage';
@@ -14,7 +14,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(undefined);
   
   useEffect(() => {
-    if(currentUser == undefined) {
+    if(currentUser === undefined) {
       return;
     }
     const eventListRef = ref(db, "eventList/" + currentUser.uid);
@@ -58,8 +58,8 @@ function App() {
         <NavBar auth={getAuth()} />
         <main>
           <Routes>
-            <Route path="/" element={<HomePage currentEventList={currentEventList} currentUser={currentUser}/>} />
-            {/* <Route path="countdown" element={<Countdown currentEventList={currentEventList} />} /> */}
+          <Route path="/" element={<HomePage currentEventList={currentEventList} setCurrentEventList={setCurrentEventList} currentUser={currentUser}/>} />
+            <Route path="countdown" element={<Countdown currentEventList={currentEventList} />} />
             <Route path="about" element={<Static.AboutPage />} />
             <Route path="*" element={<Static.ErrorPage />} />
           </Routes>
