@@ -11,7 +11,9 @@ import PersonDetails from './PersonDetail';
 import PERSONDATA from '../data/personData.json';
 
 function App() {
+  //database
   const db = getDatabase();
+  //state
   const [currentEventList, setCurrentEventList] = useState([]);
   const [currentUser, setCurrentUser] = useState(undefined);
   
@@ -37,10 +39,11 @@ function App() {
     return cleanup;
   }, [currentUser])
 
+  //authentication
   useEffect(() => {
     const auth = getAuth();
 
-    //addEventListener("loginEvent", () => {})
+    //addEventListener
     const unregisterAuthListener = onAuthStateChanged(auth, (firebaseUser) => {
       if (firebaseUser) {
         setCurrentUser(firebaseUser);

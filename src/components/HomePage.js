@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-// import DisplayedBlock from './DeleteOrDisplay';
 import ComposeForm from './CreateBlock';
-import { getDatabase, ref, /* set as firebaseSet */ push as firebasePush } from 'firebase/database';
+import { getDatabase, ref, push as firebasePush } from 'firebase/database';
 import EventList from './EventList';
 import { FilterSection } from './FilterSection';
 
@@ -9,7 +8,6 @@ import { FilterSection } from './FilterSection';
 function HomePage(props) {
     const db = getDatabase();
     const [cardsCopy, setCardsCopy] = useState([]);
-    // const cardsCopy = [];
     function handleFilter(input) {
         let eventType = input.target.id;
         let cards = props.currentEventList;
@@ -25,7 +23,7 @@ function HomePage(props) {
         setCardsCopy(props.currentEventList);
     }, [props.currentEventList]); //Add props.currentEventList
 
-
+    //add new card
     const addCard = (StartDate, StartTime, StartTimezone, StartWeekDay, EndDate, EndTime, EndTimezone, EndWeekDay, EventType, Description) => {
         let newCard = {
             "StartDate": StartDate,

@@ -5,6 +5,7 @@ import AddCircle from '@material-ui/icons/AddCircle';
 const DEFAULT_TYPE = ["Try to Do", "Must Do"]
 
 export default function ComposeForm(props) {
+    //state
     const [currentType, setCurrentType] = useState("Try to Do");
     const [userTimeStartInput, setUserTimeStartInput] = useState("08:25");
     const [userTimeZoneStartInput, setUserTimeZoneStartInput] = useState("PST");

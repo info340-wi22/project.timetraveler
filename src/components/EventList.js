@@ -12,7 +12,7 @@ export default function EventList(props) {
         </div> 
     );
 }
-
+//one Event
 function Event(props) {
     const event = props.event;
     return (
