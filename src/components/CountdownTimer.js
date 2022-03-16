@@ -12,6 +12,11 @@ const defaultRemainingTime = {
 const CountdownTimer = ({timeInSeconds}) => {
     const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
 
+    //use effect is used to get remainingTime 
+    //by using setintervel, the time in second will be updated every 1000 miliseconds ( by using the number of 1000)
+    //https://sebhastian.com/setinterval-react/
+    //To avoid unamounted reload after the timer stop, we need to clear setInterval, so we use clearInterval
+    //Then the TimeInSeconds paramter will update everytime rerender
     useEffect(() => {
         const intervalId = setInterval(() =>{
             updateRemainingTime(timeInSeconds);
